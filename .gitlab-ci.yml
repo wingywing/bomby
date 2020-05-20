@@ -9,7 +9,7 @@ neocities:
   environment: neocities
   script:
     - mkdir -p $HOME/.config/neocities
-    - if $NEOCITIES_TOKEN -eq ""; then mv $NEOCITIES_TOKEN $HOME/.config/neocities/config; else echo Please see README.md for information on how to set your Neocities API token && false; fi
+    - if ["$NEOCITIES_TOKEN" -eq ""]; then mv $NEOCITIES_TOKEN $HOME/.config/neocities/config; else echo Please see README.md for information on how to set your Neocities API token && false; fi
     # If you use a static site generator and it places its output somewhere else,
     # change into that directory instead.
     - cd public
