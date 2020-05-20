@@ -22,8 +22,8 @@ Example plain HTML site using GitLab CI with [Neocities](https://neocities.org/)
 This project's static Pages are built by [GitLab CI][ci], following the steps
 defined in [`.gitlab-ci.yml`](.gitlab-ci.yml):
 
-You need to create a masked, protected variable scoped to the environment
-`neocities` to store your Neocities API token. The key should be called
+You need to create a masked, protected, **file type** variable, scoped to the environment
+`neocities` which will store your Neocities API token. The key should be called
 `NEOCITIES_TOKEN` and the value should be the API key from the site settings
 area for your site on Neocities.
 
