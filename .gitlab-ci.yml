@@ -1,11 +1,14 @@
-image: alpine:latest
+image: ruby:2.6.5
 
-pages:
+before_script:
+  - gem install bundler
+  - bundle install
+
+neocities:
   stage: deploy
+  environment: neocities
   script:
-  - echo 'Nothing to do...'
-  artifacts:
-    paths:
-    - public
-  only:
-  - master
+    - mkdir -p $HOME/.config/neocities
+    - mv $NEOCITIES_TOKEN $HOME/.config/neocities/config
+    - cd public
+    - bundle exec neocities push .

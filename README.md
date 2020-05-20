@@ -1,11 +1,8 @@
-![Build Status](https://gitlab.com/pages/plain-html/badges/master/build.svg)
+![Build Status](https://gitlab.com/pages/neocities/badges/master/build.svg)
 
 ---
 
-Example plain HTML site using GitLab Pages.
-
-Learn more about GitLab Pages at https://pages.gitlab.io and the official
-documentation https://docs.gitlab.com/ce/user/project/pages/.
+Example plain HTML site using GitLab CI with [Neocities](https://neocities.org/)
 
 ---
 
@@ -20,35 +17,20 @@ documentation https://docs.gitlab.com/ce/user/project/pages/.
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## GitLab CI
+## GitLab CI Configuration
 
 This project's static Pages are built by [GitLab CI][ci], following the steps
 defined in [`.gitlab-ci.yml`](.gitlab-ci.yml):
 
-```
-image: alpine:latest
+You need to create a masked, protected variable scoped to the environment
+`neocities` to store your Neocities API token. The key should be called
+`NEOCITIES_TOKEN` and the value should be the API key from the site settings
+area for your site on Neocities.
 
-pages:
-  stage: deploy
-  script:
-  - echo 'Nothing to do...'
-  artifacts:
-    paths:
-    - public
-  only:
-  - master
-```
+The included example expects to put all your HTML files in the `public/` directory.
 
-The above example expects to put all your HTML files in the `public/` directory.
-
-## GitLab User or Group Pages
-
-To use this project as your user/group website, you will need one additional
-step: just rename your project to `namespace.gitlab.io`, where `namespace` is
-your `username` or `groupname`. This can be done by navigating to your
-project's **Settings**.
-
-Read more about [user/group Pages][userpages] and [project Pages][projpages].
+If you use a static site generator, just have it build its content to the `public/`
+folder and then no additional changes are needed.
 
 ## Did you fork this project?
 
