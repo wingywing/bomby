@@ -1,11 +1,17 @@
 {{ partial "header.html" . }}
 
-
-
-<div class="body-container" id="blogpost-container">
-    <h1>{{ .Title }}</h1>
-    <p class="blog-date"><time>{{ dateFormat "2006, Jan 06, Mon" .Date }}</time></p>
-    {{ .Content }}
+<div id="blog-flex-container">
+    <div class="body-container" id="blog-bodycontainer">
+        <article class="blog-container">
+            <div class="blog-container-overlay">
+                <h1>{{ .Title }}</h1>
+                <p class="blog-date"><time>{{ dateFormat "2006, Jan 06, Mon" .Date }}</time></p>
+                {{ .Content }}
+            </div>
+        </article>
+    </div>
+    {{ partial "sidebar.html" . }}
+</div>
 </div>
 
 {{ partial "footer.html" . }}

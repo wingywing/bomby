@@ -3,7 +3,7 @@
         <div id="blog-flex-container">
           <div class="body-container" id="blog-bodycontainer">
                 {{ range .Pages.ByPublishDate.Reverse }}
-                  <article class="blog-container" id="blog-item1">
+                  <article class="blog-container">
                     <div class="blog-container-overlay">
                         <h3 class="blog-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
                         <p class="blog-date">	<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
@@ -11,17 +11,17 @@
                         </time></p>
                         <div class="blog-image-overflow">
                         </div>
-                        <p class="blog-caption">{{ .Content }}</p>
+                        <p class="blog-caption">{{ .Summary }}</p>
+                        {{ if .Truncated }}
+                        <div>
+                            <a href="{{ .Permalink }}" class="blog-readmore">Read more...</a>
+                        </div>
                     </div>
+                    {{ end }}
                 </article>
                 {{ end }}
           </div>
-          <div class="body-container" id="blog-tagcontainer">
-            <div class="search-container">
-              <input type="text" class="searchbar">
-              <input type="button" class="searchbutton" value="Search!">
-          </div>
-          </div>
+          {{ partial "sidebar.html" . }}
       </div>
   </header>
 {{ partial "footer.html" . }}
