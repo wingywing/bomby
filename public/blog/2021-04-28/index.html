@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woohoo! | Bomby&#39;s Website!</title>
+    
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/cursors.css" rel="stylesheet" type="text/css" media="all">
+    
+    <script type="text/javascript" src="/js/fire.js"></script>
+    <script type="text/javascript">
+        snowStorm.targetElement = 'banner-img-container';
+    </script>
+    
+    <script src="vendor/mark.js/dist/mark.min.js"></script>
+    </head>
+
+<header class="site-header">
+  <div id="banner-img-container">
+    <p class="welcome-txt"> Welcome to...</p>
+    <a href="https://bomby.neocities.org/">
+        <h1><img class="banner-img" src="/images/banner.png" alt="Banner saying Bomby's Website"></h1>
+    </a>
+</div>
+  <nav class="site-nav">
+    <div class="navbar">
+      |  <a class="nav-item" href="http://bomby.neocities.org/">Home</a>  |
+      
+      <a>
+        <a  class="nav-item" href="/blog">Blog</a>  |
+      </a>
+      
+      <a>
+        <a  class="nav-item" href="/about">About</a>  |
+      </a>
+      
+    </div>
+  </nav>
+</header>
+
+
+<div id="header-bottom">
+    <button id="togglestamps-button">Hide or show buttons</button>
+    <div id="stamps-container">
+        
+        <div id="stamps-text-container">
+            <p class="body-text">Some buttons showing what I'm into! <br> The buttons made by other people are
+                linked to their pages, while stamps I made myself will link to this site (or to an interest's
+                page) if you click on them. <br> Feel free to use my buttons!</p>
+            <button id="toggleButtonSize-button">- / +</button>
+        </div>
+        <nav>
+            <a href="https://bomby.neocities.org/"><img class="stamp" id="stamp1" src="/images/BombyButton.gif"
+                    alt="Bomby button"></a>
+            <a href="https://neocities.org"><img class="stamp"
+                    src="https://hellosailor.neocities.org/microbars/neocities%20page%20stamp.png"
+                    alt="Neocities button"></a>
+            <a href="https://bomby.neocities.org"><img class="stamp" src="/images/KirbyLoveButton.gif"
+                    alt="Animated Kirby button"> </a>
+                <a href="https://www.stardewvalley.net/"><img class="stamp" src="/images/StardewValleyButton.gif"
+                        alt="Stardew Valley button"></a>
+                <a href="https://www.bomby.neocities.org"><img class="stamp" src="/images/AnimalCrossingButton.gif"
+                        alt="Animated Animal Crossing Button"></a>
+                <a href="https://buttoncollection.neocities.org/"><img class="stamp"
+                        src="https://web.archive.org/web/19990129063815im_/http://www.geocities.com/NapaValley/2022/blank88.gif"
+                        alt="Blank button"></a>
+                <a href="https://j1m1.neocities.org/"><img class="stamp"
+                        src="https://cyber.dabamos.de/88x31/cutefont-user0566.gif" alt="Cute Font User"></a>
+                <a href="https://bonsbakery.neocities.org"><img class="stamp"
+                        src="https://bonsbakery.neocities.org/images/buttons/BonsBakeryButton.gif"
+                        alt="Bon's Bakery"></a>
+                <a href="https://corq.neocities.org/"><img class="stamp"
+                        src="https://corq.neocities.org/button-alt.png"></a>
+        </nav>
+
+    </div>
+    <script src="/js/main.js"></script>
+</div>
+
+
+
+<body>
+    <div class="backtotop-button"><a onClick="window.scroll({ top: 0,left: 0,behavior: 'smooth' });"><img
+            src="/images/ParasolKirby.gif" style="height: 100%"></a></div>
+    <main class="content">
+
+        
+
+<div id="blog-flex-container">
+    <div class="body-container" id="blog-bodycontainer">
+        <article class="blog-container">
+            <div class="blog-container-overlay">
+                <h1>Woohoo!</h1>
+                <p class="blog-date"><time>2021, Apr 21, Wed</time></p>
+                <p>I&rsquo;m so happy!!!<br>
+I finally figured out how to get VSCode to build and push new changes of my Hugo website to Neocities automatically.<br>
+This problem took me so long to solve (with a lot of experimentation) because all the tools I found were far too technical for a n00b like me.</p>
+<p>So&hellip; I&rsquo;ll give you in a nutshell of how I did it! (Special thanks to <a href="https://neocities.org/site/kirbykevinson">Kirby Kevinson</a> on the <a href="https://discord.com/invite/eSBb68a">Penny&rsquo;s Club discord</a> server for giving me the hint of using GitLab.</p>
+
+
+
+
+<a href="https://about.gitlab.com/images/press/logo/jpg/gitlab-logo-gray-rgb.jpg"><img class="blogimage" src="https://about.gitlab.com/images/press/logo/jpg/gitlab-logo-gray-rgb.jpg" style="max-height:200px" alt="Gitlab Logo" decoding="async" /></a>
+<p>First of all, I changed my source code management platform from Github to GitLab. This is because I couldn&rsquo;t get the <!-- raw HTML omitted -->Neocities Github actions<!-- raw HTML omitted --> to work. 😞 I&rsquo;m sure there&rsquo;s nothing wrong with it, but I just couldn&rsquo;t figure it out for the life of me (being completely new to webdev).</p>
+
+
+
+
+<a href="https://i.postimg.cc/02pPFzNR/image.png"><img class="blogimage" src="https://i.postimg.cc/02pPFzNR/image.png" style="max-height:400px" alt="Screenshot of the neocities GitLab CI repository" decoding="async" /></a>
+<p>Secondly, I came across <!-- raw HTML omitted -->Neocities GitLab CI<!-- raw HTML omitted -->, which allowed for the building and deployment of sites to Neocities on push. I copied all the files in there across to my own project (except for the public folder, since Hugo will build that for me).</p>
+
+
+
+
+<a href="https://i.postimg.cc/KvYDsMf4/image.png"><img class="blogimage" src="https://i.postimg.cc/KvYDsMf4/image.png" style="max-height:400px" alt="Screenshot showing where to add a GitLab CI variable" decoding="async" /></a>
+<p>The readme.md of <!-- raw HTML omitted -->Neocities GitLab CI<!-- raw HTML omitted --> required me to make a GitLab file variable with my Neocities API, so I did that as well. You can add it under Settings&gt;CI/CD&gt;Variables (Expand this section!)&gt;Add Variable in your project repository.</p>
+
+
+
+
+<a href="https://i.postimg.cc/g0wYMNX4/image.png"><img class="blogimage" src="https://i.postimg.cc/g0wYMNX4/image.png" style="max-height:400px" alt="Screenshot showing how to add a GitLab CI variable" decoding="async" /></a>
+<p>Make sure your Add Variable dialogue look something like this with all the boxes ticked! (See above) In the Value box, type in your Neocities site API. You can find it if you go to: neocities.org/settings/[YOUR-WEBSITE-NAME-HERE]#api_key</p>
+<p>After setting this up, your depository should automatically push to Neocities every time you run &ldquo;git push&rdquo;. If you aren&rsquo;t using a static site generator, then you&rsquo;re good to go by this stage. If you use a Ruby-based static site generator (like Jekyll), you should be able to get this running pretty easily as well after editing the .gitlab-ci.yml file to install Jekyll and build it.</p>
+<p>However, since Hugo isn&rsquo;t Ruby-based I had to make some small adjustments to the .gitlab-ci.yml file so that it builds and deploys in separate steps.</p>
+
+
+
+
+<a href="https://i.postimg.cc/rmMR7B1M/image.png"><img class="blogimage" src="https://i.postimg.cc/rmMR7B1M/image.png" style="max-height:400px" alt="Screenshot showing my edited .gitlab-ci.yml file for Hugo" decoding="async" /></a>
+<p>&hellip;and it works! Every time I run git push on VSCode now, it&rsquo;ll automatically build my static files through Hugo and deploy them to Neocities! 
+You can find my modified Neocities .gitlab-ci.yml file <a href="https://pastebin.com/mvb1jUej">here</a>.</p>
+<p>Sorry if I seem a little too excited for something this simple, but it was so hard to find anything that&rsquo;s easy to understand for complete beginners! I hope that this helps some other people here too.</p>
+<p style="text-align: left;">
+    
+To-do: <br>
+<strike>1. figure out how to push my Hugo static files to Neocities automagically</strike> DONE!! YAY!<br>
+<strike>2. Limit the front page to only have a snippet of the post (so that the "read more..." button has a purpose hehe)</strike> Done!<br>
+3. Implement a search engine <br>
+4. Show tags/categories on the right column of the blog page <br>
+5. Show tags/categories at the bottom of each post <br>
+<strike>6. Make a template that I can use for my mark-down posts with the custom shortcodes for left-align and linebreaks</strike> Done <br>
+
+<!-- Image shortcodes
+
+
+
+
+<a href="url"><img class="blogimage" src="url" style="" alt="alt-text" decoding="async" /></a> For inserting images
+<p style="text-align: left;">
+     - For left-aligning
+
+<br> - For new lines -->
+
+</p>
+
+</p>
+            </div>
+        </article>
+    </div>
+    <div class="body-container" id="blog-tagcontainer">
+    <div class="search-container">
+      <input type="text" class="searchbar">
+      <input type="button" class="searchbutton" value="Search!">
+    </div>
+  </div>
+</div>
+</div>
+
+</main>
+	
+<footer>
+	<p>&copy;2021 Bomby&#39;s Website!</p>
+</footer>
+<script src="/js/main.js"></script>
+<script src="/js/bundle.js"></script>
+</body>
+</html>
+

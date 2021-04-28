@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>life | Bomby&#39;s Website!</title>
     
     <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/cursors.css" rel="stylesheet" type="text/css" media="all">
     
     <script type="text/javascript" src="/js/fire.js"></script>
     <script type="text/javascript">
         snowStorm.targetElement = 'banner-img-container';
     </script>
-	<link rel="alternate" type="application/rss+xml" href="http://bomby.neocities.org/tags/life/index.xml" title="Bomby's Website!" />
-	</head>
+    
+    <script src="vendor/mark.js/dist/mark.min.js"></script>
+    
+    <link rel="alternate" type="application/rss+xml" href="http://bomby.neocities.org/tags/life/index.xml" title="Bomby's Website!" /> </head>
 
 <header class="site-header">
   <div id="banner-img-container">
@@ -78,16 +82,18 @@
 </div>
 
 
+
 <body>
-	<main class="content">
+    <div class="backtotop-button"><a onClick="window.scroll({ top: 0,left: 0,behavior: 'smooth' });"><img
+            src="/images/ParasolKirby.gif" style="height: 100%"></a></div>
+    <main class="content">
 
-
-
+        
         
         <div id="blog-flex-container">
           <div class="body-container" id="blog-bodycontainer">
                 
-                  <article class="blog-container" id="blog-item1">
+                  <article class="blog-container">
                     <div class="blog-container-overlay">
                         <h3 class="blog-title"><a href="/blog/2021-04-27/">Just a work and uni kinda day...</a></h3>
                         <p class="blog-date">	<time datetime="2021-04-27T23:23:32&#43;15:00">
@@ -101,37 +107,23 @@
 
 
 
-<img class="blogimage" src="https://static.wikia.nocookie.net/ecccf5b8-89c1-4c14-b3cd-cd3d2343c849" alt="Animated gif of Kirby with sparkly eyes" decoding="async" />
-<div style="text-align: left;">
-    <p>
-To-do: 
-<br>
-<strike> 1. Implement a template for individual pages for each blog post</strike> Done! 
-<br>
-2. figure out how to push my Hugo static files to Neocities automagically  
-<br>
-3. Limit the front page to only have a snippet of the post (so that the "read more..." button has a purpose hehe)  
-<br>
-4. Implement a search engine  
-<br>
-5. Show tags/categories on the right column of the blog page"  
-<br>
-6. Show tags/categories at the bottom of each post 
-<br>
-7. Make a template that I can use for my mark-down posts with the custom shortcodes for left-align and linebreaks </p>
-</div>
 
-</p>
+<a href="https://static.wikia.nocookie.net/ecccf5b8-89c1-4c14-b3cd-cd3d2343c849"><img class="blogimage" src="https://static.wikia.nocookie.net/ecccf5b8-89c1-4c14-b3cd-cd3d2343c849" style="" alt="Animated gif of Kirby with sparkly eyes" decoding="async" /></a></p>
+                        
+                        <div>
+                            <a href="http://bomby.neocities.org/blog/2021-04-27/" class="blog-readmore">Read more...</a>
+                        </div>
                     </div>
+                    
                 </article>
                 
           </div>
           <div class="body-container" id="blog-tagcontainer">
-            <div class="search-container">
-              <input type="text" class="searchbar">
-              <input type="button" class="searchbutton" value="Search!">
-          </div>
-          </div>
+    <div class="search-container">
+      <input type="text" class="searchbar">
+      <input type="button" class="searchbutton" value="Search!">
+    </div>
+  </div>
       </div>
   </header>
 </main>
@@ -140,6 +132,7 @@ To-do:
 	<p>&copy;2021 Bomby&#39;s Website!</p>
 </footer>
 <script src="/js/main.js"></script>
+<script src="/js/bundle.js"></script>
 </body>
 </html>
 

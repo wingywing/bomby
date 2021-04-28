@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
 	<meta name="generator" content="Hugo 0.82.1" />
     <meta charset="UTF-8">
@@ -8,13 +9,16 @@
     <title>Bomby&#39;s Website!</title>
     
     <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/cursors.css" rel="stylesheet" type="text/css" media="all">
     
     <script type="text/javascript" src="/js/fire.js"></script>
     <script type="text/javascript">
         snowStorm.targetElement = 'banner-img-container';
     </script>
-	<link rel="alternate" type="application/rss+xml" href="http://bomby.neocities.org/index.xml" title="Bomby's Website!" />
-	</head>
+    
+    <script src="vendor/mark.js/dist/mark.min.js"></script>
+    
+    <link rel="alternate" type="application/rss+xml" href="http://bomby.neocities.org/index.xml" title="Bomby's Website!" /> </head>
 
 <header class="site-header">
   <div id="banner-img-container">
@@ -79,11 +83,13 @@
 </div>
 
 
+
 <body>
-	<main class="content">
+    <div class="backtotop-button"><a onClick="window.scroll({ top: 0,left: 0,behavior: 'smooth' });"><img
+            src="/images/ParasolKirby.gif" style="height: 100%"></a></div>
+    <main class="content">
 
-
-
+        
 
 
 
@@ -125,7 +131,8 @@
             <p class="body-text">What's been going on with this website, and maybe my life?</p>
             <div id="update-box">
                 
-<p><b>28/04/2021 (Wed) Devlog</b> - From now on, I'll just use this box for short website updates since the blogging system is set up!</p>
+<p><b>28/04.2021 (Wed) 6:24PM</b> <br> + Added a back to top kirby button. <br> + Added animated Kirby link cursors.</p>
+<p><b>28/04/2021 (Wed) Devlog</b> - From now on, I'll just use this box for short website updates since the blogging system is set up! I've finally figured out how to automatically build and push my website to Neocities through GitLab Pipelines. Check out my full post on it <a href="http://localhost:14617/blog/2021-04-28/" class="whitelink">here!</a></p>
 <p><b>23/04/2021 (Fri) Lifelog</b> - I've added Corq's website to my badges section! Thanks for
     leaving a comment. I love Kirby!
     My friends said they might make a website as well so that'll be fun. </p>
@@ -192,17 +199,24 @@
 
                     
 
-                    <h3 class="blog-title"><a href="http://bomby.neocities.org/blog/2021-04-27/">Just a work and uni kinda day...</a></h3>
-                    <p class="blog-date"><time>2021, Apr 21, Tue</time></p>
+                    <h3 class="blog-title"><a href="http://bomby.neocities.org/blog/2021-04-28/">Woohoo!</a></h3>
+                    <p class="blog-date"><time>2021, Apr 21, Wed</time></p>
                     <div class="blog-image-overflow">
                     </div>
                     <p class="blog-caption">
-                        Now that I have a system (kinda) working with Hugo and Neocities, I can focus on just writing my blog! Yay. Today, I just went to work and had classes between my shifts. To be honest, the whole day, I was just thinking about how I can get my website to automatically push itself to Neocities&hellip; 😆
-I think I might&rsquo;ve figured it out by using the Github actions: Deploy to Neocities.
+                        <p>I&rsquo;m so happy!!!<br>
+I finally figured out how to get VSCode to build and push new changes of my Hugo website to Neocities automatically.<br>
+This problem took me so long to solve (with a lot of experimentation) because all the tools I found were far too technical for a n00b like me.</p>
+<p>So&hellip; I&rsquo;ll give you in a nutshell of how I did it! (Special thanks to <a href="https://neocities.org/site/kirbykevinson">Kirby Kevinson</a> on the <a href="https://discord.com/invite/eSBb68a">Penny&rsquo;s Club discord</a> server for giving me the hint of using GitLab.</p>
+
+
+
+
+<a href="https://about.gitlab.com/images/press/logo/jpg/gitlab-logo-gray-rgb.jpg"><img class="blogimage" src="https://about.gitlab.com/images/press/logo/jpg/gitlab-logo-gray-rgb.jpg" style="max-height:200px" alt="Gitlab Logo" decoding="async" /></a>
                     </p>
                     
                         <div>
-                            <a href="http://bomby.neocities.org/blog/2021-04-27/" class="blog-readmore">Read more...</a>
+                            <a href="http://bomby.neocities.org/blog/2021-04-28/" class="blog-readmore">Read more...</a>
                         </div>
                         
                     
@@ -218,5 +232,6 @@ I think I might&rsquo;ve figured it out by using the Github actions: Deploy to N
 	<p>&copy;2021 Bomby&#39;s Website!</p>
 </footer>
 <script src="/js/main.js"></script>
+<script src="/js/bundle.js"></script>
 </body>
 </html>
