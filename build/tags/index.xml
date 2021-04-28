@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Bomby&#39;s Website!</title>
+    <link>http://bomby.neocities.org/tags/</link>
+    <description>Recent content in Tags on Bomby&#39;s Website!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Apr 2021 15:39:42 +1500</lastBuildDate><atom:link href="http://bomby.neocities.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>blog</title>
+      <link>http://bomby.neocities.org/tags/blog/</link>
+      <pubDate>Wed, 28 Apr 2021 15:39:42 +1500</pubDate>
+      
+      <guid>http://bomby.neocities.org/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dev</title>
+      <link>http://bomby.neocities.org/tags/dev/</link>
+      <pubDate>Wed, 28 Apr 2021 15:39:42 +1500</pubDate>
+      
+      <guid>http://bomby.neocities.org/tags/dev/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>http://bomby.neocities.org/tags/hugo/</link>
+      <pubDate>Wed, 28 Apr 2021 15:39:42 +1500</pubDate>
+      
+      <guid>http://bomby.neocities.org/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>http://bomby.neocities.org/tags/life/</link>
+      <pubDate>Tue, 27 Apr 2021 23:23:32 +1500</pubDate>
+      
+      <guid>http://bomby.neocities.org/tags/life/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

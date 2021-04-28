@@ -1,9 +1,11 @@
+//Code from https://retifrav.github.io/blog/2020/01/05/hugo-search/
+
 var sidebars = document.getElementById("sidebars");
 var searchResults = document.getElementById("search-results");
 var searchInput = document.getElementById("search-query");
 
 // the length of the excerpts
-var contextDive = 40;
+var contextDive = 100;
 
 var timerUserInput = false;
 searchInput.addEventListener("keyup", function()

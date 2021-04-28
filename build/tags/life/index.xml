@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>life on Bomby&#39;s Website!</title>
+    <link>http://bomby.neocities.org/tags/life/</link>
+    <description>Recent content in life on Bomby&#39;s Website!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Apr 2021 23:23:32 +1500</lastBuildDate><atom:link href="http://bomby.neocities.org/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Just a work and uni kinda day...</title>
+      <link>http://bomby.neocities.org/blog/2021-04-27/</link>
+      <pubDate>Tue, 27 Apr 2021 23:23:32 +1500</pubDate>
+      
+      <guid>http://bomby.neocities.org/blog/2021-04-27/</guid>
+      <description>&lt;p&gt;Now that I have a system (kinda) working with Hugo and Neocities, I can focus on just writing my blog! Yay. Today, I just went to work and had classes between my shifts. To be honest, the whole day, I was just thinking about how I can get my website to automatically push itself to Neocities&amp;hellip; 😆&lt;/p&gt;
+&lt;p&gt;I think I might&amp;rsquo;ve figured it out by using the Github actions: &lt;a href=&#34;https://github.com/marketplace/actions/deploy-to-neocities&#34;&gt;Deploy to Neocities&lt;/a&gt;. I&amp;rsquo;ll update to let you know if it actually works.&lt;/p&gt;
+&lt;p&gt;Class today was fun&amp;hellip; We just played around with inks and the like. Messy, but fun.&lt;/p&gt;
+
+
+
+
+&lt;a href=&#34;https://static.wikia.nocookie.net/ecccf5b8-89c1-4c14-b3cd-cd3d2343c849&#34;&gt;&lt;img class=&#34;blogimage&#34; src=&#34;https://static.wikia.nocookie.net/ecccf5b8-89c1-4c14-b3cd-cd3d2343c849&#34; style=&#34;&#34; alt=&#34;Animated gif of Kirby with sparkly eyes&#34; decoding=&#34;async&#34; /&gt;&lt;/a&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

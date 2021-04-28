@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on Bomby&#39;s Website!</title>
+    <link>http://bomby.neocities.org/tags/blog/</link>
+    <description>Recent content in blog on Bomby&#39;s Website!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Apr 2021 15:39:42 +1500</lastBuildDate><atom:link href="http://bomby.neocities.org/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Woohoo!</title>
+      <link>http://bomby.neocities.org/blog/2021-04-28/</link>
+      <pubDate>Wed, 28 Apr 2021 15:39:42 +1500</pubDate>
+      
+      <guid>http://bomby.neocities.org/blog/2021-04-28/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m so happy!!!&lt;br&gt;
+I finally figured out how to get VSCode to build and push new changes of my Hugo website to Neocities automatically.&lt;br&gt;
+This problem took me so long to solve (with a lot of experimentation) because all the tools I found were far too technical for a n00b like me.&lt;/p&gt;
+&lt;p&gt;So&amp;hellip; I&amp;rsquo;ll give you in a nutshell of how I did it! (Special thanks to &lt;a href=&#34;https://neocities.org/site/kirbykevinson&#34;&gt;Kirby Kevinson&lt;/a&gt; on the &lt;a href=&#34;https://discord.com/invite/eSBb68a&#34;&gt;Penny&amp;rsquo;s Club discord&lt;/a&gt; server for giving me the hint of using GitLab.&lt;/p&gt;
+
+
+
+
+&lt;a href=&#34;https://about.gitlab.com/images/press/logo/jpg/gitlab-logo-gray-rgb.jpg&#34;&gt;&lt;img class=&#34;blogimage&#34; src=&#34;https://about.gitlab.com/images/press/logo/jpg/gitlab-logo-gray-rgb.jpg&#34; style=&#34;max-height:200px&#34; alt=&#34;Gitlab Logo&#34; decoding=&#34;async&#34; /&gt;&lt;/a&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,5 +1,11 @@
-{{- .Scratch.Add "index" slice -}}
-{{- range (where .Site.RegularPages "Section" "blog") -}}
-    {{ $.Scratch.Add "index" (dict "title" .Title "content" (.Summary | plainify) "permalink" .Permalink) }}
-{{- end -}}
-{{ $.Scratch.Get "index" | jsonify }}
+[
+    {{- range $index, $page := .Site.RegularPages -}}
+      {{- if gt $index 0 -}} , {{- end -}}
+      {{- $entry := dict "uri" $page.RelPermalink "title" $page.Title -}}
+      {{- $entry = merge $entry (dict "content" ($page.Plain | htmlUnescape)) -}}
+      {{- $entry = merge $entry (dict "description" $page.Description) -}}
+      {{- $entry = merge $entry (dict "categories" $page.Params.categories) -}}
+      {{- $entry = merge $entry (dict "tags" $page.Params.tags) -}}
+      {{- $entry | jsonify -}}
+    {{- end -}}
+  ]
