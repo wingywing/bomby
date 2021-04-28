@@ -14,6 +14,8 @@
     <script type="text/javascript">
         snowStorm.targetElement = 'banner-img-container';
     </script>
+    <!-- Scripts for mark.js -->
+    <script src="vendor/mark.js/dist/mark.min.js"></script>
     {{ with .OutputFormats.Get "rss" -}} {{ printf `
     <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end -}}
 </head>
