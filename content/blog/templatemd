@@ -7,7 +7,7 @@ tags: [tags, here]
 ---
 
 <!-- Image shortcodes -->
-{{< img src="url" alt="alt-text" >}} For inserting images
+{{< img src="url" alt="alt-text" style=“stylehere”>}} For inserting images
 
 {{< left >}} - For left-aligning
 {{< br >}} - For new lines
