@@ -1,0 +1,15 @@
+<div class="widget leftalign">
+    <h3 style="display: inline">Categories:</h3>
+    <select id="dropdown-archive" onchange="location = this.value;">
+        <option>What type of content?</option>
+        {{ range $name, $items := .Site.Taxonomies.categories }}
+        <option value="{{ $.Site.BaseURL }}/categories/{{ $name | urlize }}"><a href=""></a>{{ $name }} ({{ .Count }})</a>
+        </option>
+        {{ end }}
+    </select>
+    <div id="list-archive">
+        {{ range $name, $items := .Site.Taxonomies.categories }}
+        <option><a href="{{ $.Site.BaseURL }}/categories/{{ $name | urlize }}">{{ $name }} ({{ .Count }})</a></option>
+        {{ end }}
+    </div>
+</div>

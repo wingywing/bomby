@@ -143,14 +143,78 @@
                 
           </div>
           <div class="body-container" id="blog-tagcontainer">
-    <div class="search-container">
-      <input id="search-query" placeholder="What are you looking for?">
+  <div class="search-container">
+    <input id="search-query" placeholder="What are you looking for?">
+  </div>
+  <div id="search-results" style="display:none;"></div>
+  <div id="sidebars">
+    <div>
+      <h2 class="mt-4 taxonomy" id="archives-section"></h2>
+      <nav class="tags_nav">
+        <a href='http://bomby.neocities.org/archives/2021/april/' class="post_tag button button_translucent" title="2021/april">
+          2021/APRIL
+          <span class="button_tally">4</span>
+        </a>
+        
+        
+      </nav>
     </div>
-    <div id="search-results" style="display:none;"></div>
-    <div id="sidebars">
-      
+    <div>
+      <h2 class="mt-4 taxonomy" id="categories-section"></h2>
+      <nav class="tags_nav">
+        <a href='http://bomby.neocities.org/categories/blog/' class="post_tag button button_translucent" title="blog">
+          BLOG
+          <span class="button_tally">4</span>
+        </a>
+        
+        
+      </nav>
+    </div>
+    <div>
+      <h2 class="mt-4 taxonomy" id="tags-section"></h2>
+      <nav class="tags_nav">
+        <a href='http://bomby.neocities.org/tags/dev/' class="post_tag button button_translucent" title="dev">
+          DEV
+          <span class="button_tally">3</span>
+        </a>
+        
+        <a href='http://bomby.neocities.org/tags/hugo/' class="post_tag button button_translucent" title="hugo">
+          HUGO
+          <span class="button_tally">3</span>
+        </a>
+        
+        <a href='http://bomby.neocities.org/tags/blog/' class="post_tag button button_translucent" title="blog">
+          BLOG
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='http://bomby.neocities.org/tags/life/' class="post_tag button button_translucent" title="life">
+          LIFE
+          <span class="button_tally">1</span>
+        </a>
+        
+        
+      </nav>
+    </div>
+
+        <div class="widget leftalign">
+    <h3 style="display: inline">Archive:</h3>
+    <select id="dropdown-archive" onchange="location = this.value;">
+        <option>A blast to the past!</option>
+        
+        <option value="http://bomby.neocities.org//archives/2021/april"><a href=""></a>2021/april (4)</a>
+        </option>
+        
+    </select>
+    <div id="list-archive">
+        
+        <option><a href="http://bomby.neocities.org//archives/2021/april">2021/april (4)</a></option>
+        
+    </div>
+</div>
     </div>
   </div>
+</div>
       </div>
   </header>
 </main>

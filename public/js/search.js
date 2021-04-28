@@ -115,8 +115,9 @@ function search(searchQuery)
         }
         else
         {
+            let div = "".concat("<div><b>I couldn't find anything...</b></div><br>" + show_image('https://i.pinimg.com/originals/2d/27/14/2d27147bb039161f40b3353776e59910.gif', 'Bob the cat'))
             searchResults.appendChild(
-                htmlToElement("<div><b>Nothing found</b></div>")
+                htmlToElement((div))
             );
         }
     });
@@ -154,4 +155,12 @@ function htmlToElement(html)
     html = html.trim();
     template.innerHTML = html;
     return template.content.firstChild;
+}
+
+function show_image(src, alt) {
+    let img = document.createElement("img");
+    img.src = src;
+    img.alt = alt;
+    img.id = "searchfailpic";
+    document.getElementById('search-results').appendChild(img);
 }

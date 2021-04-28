@@ -1,0 +1,8 @@
+<div class="widget leftalign">
+    <h3 style="display: inline">Tags:</h3> <br>
+    <div id="tags-container">
+        {{ range $name, $items := .Site.Taxonomies.tags }}
+        <div class="tags"><a href="{{ $.Site.BaseURL }}/tags/{{ $name | urlize }}">{{ $name }} <div id="tag-count">{{ .Count }}</div></a></div>
+        {{ end }}
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2022/April on Bomby&#39;s Website!</title>
+    <link>http://bomby.neocities.org/archives/2022/april/</link>
+    <description>Recent content in 2022/April on Bomby&#39;s Website!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://bomby.neocities.org/archives/2022/april/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First Post!</title>
+      <link>http://bomby.neocities.org/blog/2021-04-25/</link>
+      <pubDate>Sun, 25 Apr 2021 23:14:57 +1500</pubDate>
+      
+      <guid>http://bomby.neocities.org/blog/2021-04-25/</guid>
+      <description>I just migrated my static website to Hugo! This will make it easier for me to do blog posts. :D</description>
+    </item>
+    
+  </channel>
+</rss>

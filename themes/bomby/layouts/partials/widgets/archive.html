@@ -1,0 +1,15 @@
+<div class="widget leftalign">
+    <h3 style="display: inline">Archive:</h3>
+    <select id="dropdown-archive" onchange="location = this.value;">
+        <option>A blast to the past!</option>
+        {{ range $name, $items := .Site.Taxonomies.archives }}
+        <option value="{{ $.Site.BaseURL }}/archives/{{ $name | urlize }}"><a href=""></a>{{ $name }} ({{ .Count }})</a>
+        </option>
+        {{ end }}
+    </select>
+    <div id="list-archive">
+        {{ range $name, $items := .Site.Taxonomies.archives }}
+        <option><a href="{{ $.Site.BaseURL }}/archives/{{ $name | urlize }}">{{ $name }} ({{ .Count }})</a></option>
+        {{ end }}
+    </div>
+</div>
