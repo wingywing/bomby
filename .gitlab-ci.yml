@@ -7,7 +7,10 @@ hugo:
   stage: build
   script:
     - hugo
-
+  artifacts:
+    paths:
+      - public
+      
 neocities:
   image: ruby:2.6.5
   stage: deploy
