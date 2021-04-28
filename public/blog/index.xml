@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Bomby&#39;s Website!</title>
+    <link>http://bomby.neocities.org/blog/</link>
+    <description>Recent content in Blogs on Bomby&#39;s Website!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Apr 2021 23:23:32 +1500</lastBuildDate><atom:link href="http://bomby.neocities.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Just a work and uni kinda day...</title>
+      <link>http://bomby.neocities.org/blog/2021-04-27/</link>
+      <pubDate>Tue, 27 Apr 2021 23:23:32 +1500</pubDate>
+      
+      <guid>http://bomby.neocities.org/blog/2021-04-27/</guid>
+      <description>Now that I have a system (kinda) working with Hugo and Neocities, I can focus on just writing my blog! Yay. Today, I just went to work and had classes between my shifts. To be honest, the whole day, I was just thinking about how I can get my website to automatically push itself to Neocities&amp;hellip; 😆
+I think I might&amp;rsquo;ve figured it out by using the Github actions: Deploy to Neocities.</description>
+    </item>
+    
+    <item>
+      <title>Second Post!</title>
+      <link>http://bomby.neocities.org/blog/2021-04-26/</link>
+      <pubDate>Mon, 26 Apr 2021 23:14:57 +1500</pubDate>
+      
+      <guid>http://bomby.neocities.org/blog/2021-04-26/</guid>
+      <description>I haven&amp;rsquo;t published the website yet since I&amp;rsquo;m still trying to figure out how to get the date and images showing properly for the blog&amp;hellip;
+Edit: I&amp;rsquo;ve figured out how to do the dates properly! Turns out all my blog posts had to follow the YYYY-MM-DDThh:mm:ss+15:00 (+15:00 is my timezone ahead of CST) in order for Hugo to render it properly.
+Now I just have to: 1. Implement a template for individual pages for each blog post 2.</description>
+    </item>
+    
+    <item>
+      <title>First Post!</title>
+      <link>http://bomby.neocities.org/blog/2021-05-25/</link>
+      <pubDate>Sun, 25 Apr 2021 23:14:57 +1500</pubDate>
+      
+      <guid>http://bomby.neocities.org/blog/2021-05-25/</guid>
+      <description>I just migrated my static website to Hugo! This will make it easier for me to do blog posts. :D</description>
+    </item>
+    
+  </channel>
+</rss>

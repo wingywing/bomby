@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div id="banner-img-container">
+    <p class="welcome-txt"> Welcome to...</p>
+    <a href="https://bomby.neocities.org/">
+        <h1><img class="banner-img" src="/images/banner.png" alt="Banner saying Bomby's Website"></h1>
+    </a>
+</div>
+  <nav class="site-nav">
+    <div class="navbar">
+      |  <a class="nav-item" href="{{ .Site.BaseURL }}">Home</a>  |
+      {{ range.Site.Menus.main }}
+      <a>
+        <a  class="nav-item" href="{{ .URL }}">{{ .Name }}</a>  |
+      </a>
+      {{ end }}
+    </div>
+  </nav>
+</header>

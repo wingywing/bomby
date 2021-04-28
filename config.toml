@@ -1,0 +1,23 @@
+baseURL = "http://bomby.neocities.org/"
+languageCode = "en-us"
+title = "Bomby's Website!"
+theme = "bomby"
+enableEmoji = "true"
+
+[menu]
+    [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog"
+    weight = 10
+
+    [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about"
+    weight = 20
+
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
