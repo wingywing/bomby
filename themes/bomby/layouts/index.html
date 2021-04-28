@@ -65,13 +65,11 @@
                         {{ .Summary }}
                     </p>
                     {{ if .Truncated }}
-                    <div>
-                        <a href="{{ .Permalink }}" class="blog-readmore">Read more...</a>
-
-                    </div>
-
+                        <div>
+                            <a href="{{ .Permalink }}" class="blog-readmore">Read more...</a>
+                        </div>
+                        {{ end }}
                     {{ end }}
-
                 </div>
             </div>
         </div>
