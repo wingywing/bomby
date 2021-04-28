@@ -1,0 +1,14 @@
+---
+title: "Title here"
+date: 2021-04-26T23:14:57+15:00 
+publishdate: 2021-04-26T23:14:57+15:00 
+categories: [blog, categorieshere]
+tags: [tags, here]
+draft: "true"
+---
+
+<!-- Image shortcodes -->
+{{< img src="url" alt="alt-text" >}} For inserting images
+
+{{< left >}} - For left-aligning
+{{< br >}} - For new lines
