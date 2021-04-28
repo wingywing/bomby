@@ -1,22 +1,23 @@
-@font-face { /* Custom font*/
+@font-face {
+    /* Custom font*/
     font-family: OpenSansPX;
     src: url("../fonts/OpenSansPX.ttf");
 }
 
-
 *::-webkit-scrollbar {
     width: 12px;
-  }
-  
-  *::-webkit-scrollbar-track {
+}
+
+*::-webkit-scrollbar-track {
     background: var(--orange);
-  }
-  
-  *::-webkit-scrollbar-thumb {
+}
+
+*::-webkit-scrollbar-thumb {
     background-color: var(--yellow);
     border-radius: 20px;
     border: 3px solid var(--orange);
-  }
+}
+
 :root {
     --button-height: 31px;
     --bgorange: #ffc90e;
@@ -24,42 +25,16 @@
     --yellow: #ffff00;
     --almostblack: #362f26;
     --almostwhite: #faf0e6;
-    --gray: #808080; 
+    --gray: #808080;
 }
+
 a {
     color: var(--almostblack);
-    cursor: url(/cursors/kirbylink.png), pointer;
 }
 
 html {
-    cursor: url(/cursors/frame_0.gif), pointer;
-    -webkit-animation: cursor 400ms infinite;
-    animation: cursor 800ms infinite;
-  }
-  
-  @-webkit-keyframes cursor {
-    0% {cursor: url(/cursors/frame_0.gif), pointer;}
-    12.5% {cursor: url(/cursors/frame_1.gif), pointer;}
-    25% {cursor: url(/cursors/frame_2.gif), pointer;}
-    37.5% {cursor: url(/cursors/frame_3.gif), pointer;}
-    50% {cursor: url(/cursors/frame_4.gif), pointer;}
-    62.5% {cursor: url(/cursors/frame_5.gif), pointer;}
-    75% {cursor: url(/cursors/frame_6.gif), pointer;}
-    87.5% {cursor: url(/cursors/frame_7.gif), pointer;}
-    100% {cursor: url(/cursors/frame_0.gif), pointer;}
-  } 
-  
-  @keyframes cursor {
-    0% {cursor: url(/cursors/frame_0.gif), pointer;}
-    12.5% {cursor: url(/cursors/frame_1.gif), pointer;}
-    25% {cursor: url(/cursors/frame_2.gif), pointer;}
-    37.5% {cursor: url(/cursors/frame_3.gif), pointer;}
-    50% {cursor: url(/cursors/frame_4.gif), pointer;}
-    62.5% {cursor: url(/cursors/frame_5.gif), pointer;}
-    75% {cursor: url(/cursors/frame_6.gif), pointer;}
-    87.5% {cursor: url(/cursors/frame_7.gif), pointer;}
-    100% {cursor: url(/cursors/frame_0.gif), pointer;}
-  }
+    scroll-behavior: smooth;
+}
 
 body {
     height: 100%;
@@ -68,7 +43,7 @@ body {
     background-image: url("../images/sky.gif");
     background-size: fill;
     background-color: var(--bgorange);
-    background-repeat:repeat-x;
+    background-repeat: repeat-x;
     font-family: OpenSansPX;
     font-size: 16px;
     color: var(--almostblack);
@@ -76,41 +51,50 @@ body {
     scrollbar-width: thin;
     scrollbar-color: var(--orange) var(--yellow);
 }
+
 header {
     text-align: center;
     font-size: 24px;
 }
-.nav-item{
+
+.nav-item {
     color: var(--almostwhite);
 }
+
 h2 {
     font-size: 24px;
     font-family: OpenSansPX;
     color: var(--almostblack);
 }
-.body-text{
+
+.body-text {
     font-size: 16px;
     font-family: OpenSansPX;
     color: var(--almostblack);
 }
+
 button {
     font-family: OpenSansPX;
     font-size: 16px;
-    cursor: url(/cursors/kirbylink.cur), pointer;
 }
+
 p {
     font-size: 16px;
 }
+
+
 /* Welcome text and banner */
+
 .welcome-txt {
     text-align: left;
     padding: 0% 0% 0% 10%;
     margin: 0px;
     font-size: 36px;
-    text-shadow: 1px 1px var(--gray) ;
+    text-shadow: 1px 1px var(--gray);
     font-family: OpenSansPX;
     position: relative;
 }
+
 .banner-img {
     text-align: center;
     width: 70%;
@@ -119,37 +103,48 @@ p {
     margin-left: 50%;
     transform: translateX(-50%);
 }
+
 .stamp {
     height: var(--button-height);
-    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
-    image-rendering: -moz-crisp-edges;          /* Firefox                        */
-    image-rendering: -o-crisp-edges;            /* Opera                          */
-    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
-    image-rendering: pixelated; /* Chrome */
-    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
-    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+    image-rendering: optimizeSpeed;
+    /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;
+    /* Firefox                        */
+    image-rendering: -o-crisp-edges;
+    /* Opera                          */
+    image-rendering: -webkit-optimize-contrast;
+    /* Chrome (and eventually Safari) */
+    image-rendering: pixelated;
+    /* Chrome */
+    image-rendering: optimize-contrast;
+    /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;
+    /* IE8+                           */
 }
+
 #banner-img-container {
     overflow: hidden;
     position: relative;
-    background-color:var(--almostwhite);
+    background-color: var(--almostwhite);
     border-radius: 2em 2em 0px 0px;
     text-align: center;
     padding: 3% 6% 2% 3%;
     margin: 2% 2% 0% 2%;
     border: var(--almostblack);
     border-width: 5px;
-    border-style:dashed dashed none dashed;
+    border-style: dashed dashed none dashed;
     height: 10%;
 }
+
 .navbar {
-    background-color:var(--almostblack);
-    margin: 0% 2% 0% 2% ;
+    background-color: var(--almostblack);
+    margin: 0% 2% 0% 2%;
     padding: 10px 10px 13px 10px;
     position: relative;
     z-index: 1;
     color: white;
 }
+
 #header-bottom {
     overflow: hidden;
     position: relative;
@@ -161,21 +156,26 @@ p {
     border: var(--almostblack);
     border-width: 5px;
     border-style: none dashed dashed dashed;
-    height: 10%;  
+    height: 10%;
 }
+
 #stamps-text-container {
     margin: 0px auto 0px auto;
     max-width: 500px;
     padding: 10px;
 }
+
 #stamps-container {
     text-align: center;
 }
+
+
 /* Header done */
+
 .body-container {
     overflow: auto;
     padding: 20px;
-    background-color:var(--almostwhite);
+    background-color: var(--almostwhite);
     border: 10px solid transparent;
     border-radius: 10px;
     border-image: url('https://www.w3schools.com/css/border.png') 20% round;
@@ -183,10 +183,12 @@ p {
     scrollbar-width: thin;
     text-align: center;
 }
+
 .right-container {
     flex: 70%;
     margin: 20px 10px 20px 10px;
 }
+
 #home-flex-container {
     display: flex;
     flex-flow: row nowrap;
@@ -194,17 +196,19 @@ p {
     margin-left: 20px;
     margin-right: 20px;
 }
+
 #left-container {
-    flex:30%;
+    flex: 30%;
     overflow: auto;
     padding: 20px;
     position: relative;
     text-align: center;
     margin: 20px 10px 20px 10px;
 }
+
 #guestbook {
     max-height: 100%;
-    width:100%;
+    width: 100%;
     border: none;
     scrollbar-width: thin;
     scrollbar-color: var(--orange) var(--yellow);
@@ -218,7 +222,7 @@ p {
 }
 
 .whitelink {
-     color: var(--almostwhite)!important; 
+    color: var(--almostwhite)!important;
 }
 
 #update-box {
@@ -228,9 +232,10 @@ p {
     max-height: 200px;
     text-align: left;
     border-radius: 5px;
-    background-color:var(--almostblack);
+    background-color: var(--almostblack);
     color: var(--almostwhite);
 }
+
 #random-container {
     overflow: hidden;
     position: relative;
@@ -238,45 +243,52 @@ p {
     padding: -10px;
     margin: 20px 0px 0px 0px;
 }
+
+
 /* Blog stuff */
 
-.blog-container{
+.blog-container {
     background-image: url("/images/NewLeafPattern.jpg");
     background-repeat: repeat-x repeat-y;
     background-color: white;
     background-size: 300px;
     border-radius: 10px;
     padding: 50px;
-
 }
-#trending-container{
+
+#trending-container {
     margin: 0px 15% 25px 15%;
 }
-.blog-container-overlay{
+
+.blog-container-overlay {
     background-color: rgba(255, 255, 255, 0.90);
     padding: 10px;
     border-radius: 10px;
 }
-.blog-title{
+
+.blog-title {
     font-size: 24px;
 }
 
-.blog-date{
+.blog-date {
     color: var(--gray);
 }
 
-.blog-caption{
+.blog-caption {
     display: block;
     text-align: justify;
 }
-.blog-readmore{
+
+.blog-readmore {
     display: block;
     text-align: right;
     font-size: 16px;
 }
 
+
 /* BLOG Page */
-#blog-bodycontainer{
+
+#blog-bodycontainer {
     margin: 20px;
 }
 
@@ -288,8 +300,8 @@ p {
     margin-right: 20px;
 }
 
-#blog-bodycontainer{
-    flex:70%;
+#blog-bodycontainer {
+    flex: 70%;
     overflow: auto;
     padding: 20px 20px 0px 20px;
     position: relative;
@@ -297,7 +309,7 @@ p {
     margin: 20px 10px 20px 10px;
 }
 
-.blog-container{
+.blog-container {
     margin: 0px 0px 20px 0px;
 }
 
@@ -307,49 +319,73 @@ p {
     position: relative;
 }
 
-#blog-tagcontainer{
+#blog-tagcontainer {
     flex: 20%;
     margin: 20px 10px 20px 10px;
 }
 
-
-
-.search-container{
+.search-container {
     display: flex;
     margin-bottom: 20px;
     grid-gap: 8px;
 }
 
-
-.searchbar{
+.searchbar {
     border-radius: 10px;
     width: 100%;
 }
 
+
 /* Individual blog-posts */
+
 #blogpost-container {
     margin: 20px;
 }
 
 footer {
-  text-align: center;
+    text-align: center;
 }
 
+
 /* WIP Layout */
+
 #wip-container {
     margin: 20px;
 }
 
+
+/* Misc stuff */
+
+.backtotop-button {
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 40px;
+    /* Place the button at the bottom of the page */
+    right: 2px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+
 /* Responsive layout */
 
 @media (max-width: 1505px) {
-    .search-container{
+    .search-container {
         flex-direction: column;
     }
 }
 
 @media (max-width: 1300px) {
-    #trending-container{
+    #trending-container {
         padding: 10px;
         margin: 0px 0px 0px 0px;
     }
@@ -369,7 +405,7 @@ footer {
         padding: 0px;
         margin: 0px;
     }
-    #trending-container{
+    #trending-container {
         padding: 10px;
         margin: 0px 0px 0px 0px;
     }
@@ -383,13 +419,17 @@ footer {
     #wip-container {
         margin: 10px;
     }
-    #blog-tagcontainer{
+    #blog-tagcontainer {
         margin: 0px 10px 20px 10px;
     }
-    .search-container{
+    .search-container {
         flex-direction: row;
     }
     #blogpost-container {
         margin: 10px;
     }
-  }
+    .backtotop-button {
+        height: 64px;
+        bottom: 20px;
+    }
+}

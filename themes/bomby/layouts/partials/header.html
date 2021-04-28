@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
 <!--Meta-info in the <head>-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
     <!-- style.css file below. -->
     <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/cursors.css" rel="stylesheet" type="text/css" media="all">
     <!-- snow for banner container below -->
     <script type="text/javascript" src="/js/fire.js"></script>
     <script type="text/javascript">
         snowStorm.targetElement = 'banner-img-container';
     </script>
-	{{ with .OutputFormats.Get "rss" -}}
-		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-	{{ end -}}
+    {{ with .OutputFormats.Get "rss" -}} {{ printf `
+    <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end -}}
 </head>
 <!-- Navigation -->
 {{ partial "nav.html" . }}
@@ -22,10 +23,12 @@
 {{ partial "buttons.html" . }}
 
 <!--Content in the <body>-->
-<body>
-	<main class="content">
 
-<!-- <!DOCTYPE html>
+<body>
+    {{ partial "backtotop.html" }}
+    <main class="content">
+
+        <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 

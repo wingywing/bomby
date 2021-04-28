@@ -1,0 +1,121 @@
+/* CSS file just for animated cursors hehe*/
+
+
+/*Default cursor*/
+
+html {
+    cursor: url(/cursors/frame_0.gif), auto;
+    -webkit-animation: defaultcursor 800ms infinite;
+    animation: defaultcursor 800ms infinite;
+}
+
+@-webkit-keyframes defaultcursor {
+    0% {
+        cursor: url(/cursors/frame_0.gif), auto;
+    }
+    12.5% {
+        cursor: url(/cursors/frame_1.gif), auto;
+    }
+    25% {
+        cursor: url(/cursors/frame_2.gif), auto;
+    }
+    37.5% {
+        cursor: url(/cursors/frame_3.gif), auto;
+    }
+    50% {
+        cursor: url(/cursors/frame_4.gif), auto;
+    }
+    62.5% {
+        cursor: url(/cursors/frame_5.gif), auto;
+    }
+    75% {
+        cursor: url(/cursors/frame_6.gif), auto;
+    }
+    87.5% {
+        cursor: url(/cursors/frame_7.gif), auto;
+    }
+    100% {
+        cursor: url(/cursors/frame_0.gif), auto;
+    }
+}
+
+@keyframes defaultcursor {
+    0% {
+        cursor: url(/cursors/frame_0.gif), auto;
+    }
+    12.5% {
+        cursor: url(/cursors/frame_1.gif), auto;
+    }
+    25% {
+        cursor: url(/cursors/frame_2.gif), auto;
+    }
+    37.5% {
+        cursor: url(/cursors/frame_3.gif), auto;
+    }
+    50% {
+        cursor: url(/cursors/frame_4.gif), auto;
+    }
+    62.5% {
+        cursor: url(/cursors/frame_5.gif), auto;
+    }
+    75% {
+        cursor: url(/cursors/frame_6.gif), auto;
+    }
+    87.5% {
+        cursor: url(/cursors/frame_7.gif), auto;
+    }
+    100% {
+        cursor: url(/cursors/frame_0.gif), auto;
+    }
+}
+
+
+/* Link cursor */
+
+a {
+    cursor: url(/cursors/link/link_0.gif), pointer;
+    -webkit-animation: linkcursor 800ms infinite;
+    animation: linkcursor 800ms infinite;
+}
+
+@-webkit-keyframes linkcursor {
+    0% {
+        cursor: url(/cursors/link/link_0.gif), auto;
+    }
+    20% {
+        cursor: url(/cursors/link/link_1.gif), auto;
+    }
+    40% {
+        cursor: url(/cursors/link/link_2.gif), auto;
+    }
+    60% {
+        cursor: url(/cursors/link/link_3.gif), auto;
+    }
+    80% {
+        cursor: url(/cursors/link/link_4.gif), auto;
+    }
+    100% {
+        cursor: url(/cursors/link/link_0.gif), auto;
+    }
+}
+
+@keyframes linkcursor {
+    0% {
+        cursor: url(/cursors/link/link_0.gif), auto;
+    }
+    20% {
+        cursor: url(/cursors/link/link_1.gif), auto;
+    }
+    40% {
+        cursor: url(/cursors/link/link_2.gif), auto;
+    }
+    60% {
+        cursor: url(/cursors/link/link_3.gif), auto;
+    }
+    80% {
+        cursor: url(/cursors/link/link_4.gif), auto;
+    }
+    100% {
+        cursor: url(/cursors/link/link_0.gif), auto;
+    }
+}
