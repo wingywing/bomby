@@ -1,7 +1,3 @@
-before_script:
-  - gem install bundler
-  - bundle install
-
 stages:
   - build
   - deploy
@@ -11,11 +7,14 @@ hugo:
   stage: build
   script:
     - hugo
+
 neocities:
   image: ruby:2.6.5
   stage: deploy
   environment: neocities
   script: 
+    - gem install bundler
+    - bundle install
     # If you use a static site builder, add its build command here
     # Place user-provide token
     - if [ -z "$NEOCITIES_TOKEN" ]; then echo Please see README.md for information on how to set your Neocities API token && false; else mkdir -p $HOME/.config/neocities && mv $NEOCITIES_TOKEN $HOME/.config/neocities/config; fi
