@@ -9,17 +9,8 @@ stages:
 hugo:
   image: registry.gitlab.com/pages/hugo:latest
   stage: build
-  variables:
-  GIT_SUBMODULE_STRATEGY: recursive
-  pages:
-    script:
+  script:
     - hugo
-    artifacts:
-      paths:
-      - public
-    only:
-    - master
-
 neocities:
   image: ruby:2.6.5
   stage: deploy
