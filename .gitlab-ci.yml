@@ -7,7 +7,7 @@ before_script:
 neocities:
   stage: deploy
   environment: neocities
-  script:
+  script: hugo
     # If you use a static site builder, add its build command here
 
     # Place user-provide token
