@@ -330,7 +330,7 @@ p {
     grid-gap: 8px;
 }
 
-.searchbar {
+#search-query {
     border-radius: 10px;
     width: 100%;
 }
