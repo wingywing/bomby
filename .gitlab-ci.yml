@@ -8,9 +8,8 @@ neocities:
   stage: deploy
   environment: neocities
   script: 
-    build: hugo
     # If you use a static site builder, add its build command here
-
+    - hugo
     # Place user-provide token
     - if [ -z "$NEOCITIES_TOKEN" ]; then echo Please see README.md for information on how to set your Neocities API token && false; else mkdir -p $HOME/.config/neocities && mv $NEOCITIES_TOKEN $HOME/.config/neocities/config; fi
 
