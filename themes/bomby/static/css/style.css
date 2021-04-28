@@ -336,6 +336,11 @@ p {
     text-align: left;
 }
 
+#searchfailpic {
+    max-height: 100%;
+    max-width: 100%;
+}
+
 mark{
     background: var(--bgorange);
     color: var(--almostblack);

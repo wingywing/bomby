@@ -1,4 +1,3 @@
-var i = 0;
 // Toggles whether the buttons are visible or not under the header
 let collapse = document.getElementById("togglestamps-button");
 collapse.addEventListener("click", collapseButtons);
@@ -16,6 +15,7 @@ function collapseButtons() {
     }
 }
 
+var i = 0;
 function changeButtonSize() {
         if (i > 0) {
             document.documentElement.style.setProperty('--button-height', '31px');

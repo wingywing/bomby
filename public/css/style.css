@@ -333,6 +333,12 @@ p {
 #search-query {
     border-radius: 10px;
     width: 100%;
+    text-align: left;
+}
+
+mark{
+    background: var(--bgorange);
+    color: var(--almostblack);
 }
 
 

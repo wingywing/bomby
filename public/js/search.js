@@ -5,7 +5,7 @@ var searchResults = document.getElementById("search-results");
 var searchInput = document.getElementById("search-query");
 
 // the length of the excerpts
-var contextDive = 100;
+var contextDive = 50;
 
 var timerUserInput = false;
 searchInput.addEventListener("keyup", function()
@@ -59,9 +59,16 @@ function search(searchQuery)
 
         if (results.length > 0)
         {
-            searchResults.appendChild(
-                htmlToElement("<div><b>Found: ".concat(results.length, "</b></div>"))
-            );
+            if (results.length > 1) {
+                searchResults.appendChild(
+                    htmlToElement("<div><b>I found: ".concat(results.length, " things for you!</b></div>"))
+                );
+            }
+            else {
+                searchResults.appendChild(
+                    htmlToElement("<div><b>I found: ".concat(results.length, " thing for you!</b></div>"))
+                );
+            }
 
             // populate search results block with excerpts around the matched search query
             results.forEach(function (value, key)

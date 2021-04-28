@@ -87,5 +87,15 @@ tag = "tags"
     ordered = false
     startLevel = 2
     
-  [outputs]
-      home = ["HTML", "RSS", "JSON"]
+[outputFormats]
+
+  [outputFormats.SearchIndex]
+  baseName = "index"
+  mediaType = "application/json"
+
+[outputs]
+home = [
+  "HTML",
+  "RSS",
+  "SearchIndex"
+]
