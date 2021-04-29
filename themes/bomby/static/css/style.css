@@ -461,10 +461,6 @@ footer {
     color: var(--almostblack);
 }
 
-#tag-count a{
-    color: var(--almostblack);
-}
-
 /* Responsive layout */
 
 @media (max-width: 1505px) {
