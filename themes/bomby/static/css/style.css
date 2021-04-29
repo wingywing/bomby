@@ -458,6 +458,7 @@ footer {
     border-radius: 50%;
     width: 18px;
     text-align: center;
+    color: var(--almostblack);
 }
 
 /* Responsive layout */
