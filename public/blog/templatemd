@@ -4,10 +4,11 @@ date: 2021-04-26T23:14:57+15:00
 publishdate: 2021-04-26T23:14:57+15:00 
 categories: [blog, categorieshere]
 tags: [tags, here]
+archives: [“2021/April”]
 ---
 
 <!-- Image shortcodes -->
-{{< img src="url" alt="alt-text" >}} For inserting images
+{{< img src="url" alt="alt-text" style=“stylehere”>}} For inserting images
 
 {{< left >}} - For left-aligning
 {{< br >}} - For new lines

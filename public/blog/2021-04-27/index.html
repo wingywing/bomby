@@ -21,8 +21,8 @@
 <header class="site-header">
   <div id="banner-img-container">
     <p class="welcome-txt"> Welcome to...</p>
-    <a href="https://bomby.neocities.org/">
-        <h1><img class="banner-img" src="/images/banner.png" alt="Banner saying Bomby's Website"></h1>
+    <a href="http://bomby.neocities.org/">
+        <h1><div id="banner-img"></h1>
     </a>
 </div>
   <nav class="site-nav">
@@ -39,6 +39,13 @@
       
     </div>
   </nav>
+  <input type="checkbox" display="none" id="themeSwitch"/>
+<label for="themeSwitch"><div class="changecolour-button"><img
+    src="/images/kirby_star_big.gif" style="height: 100%"></div></label>
+
+
+
+
 </header>
 
 
@@ -74,6 +81,10 @@
                         alt="Bon's Bakery"></a>
                 <a href="https://corq.neocities.org/"><img class="stamp"
                         src="https://corq.neocities.org/button-alt.png"></a>
+                        
+                        <a href="https://sirlan-tomma.neocities.org/"><img class="stamp"
+                        src="https://i.postimg.cc/ZKhZqG2k/17-B22-B75-A838-4-B66-93-D0-325-D03-B4-E24-C.gif"></a>
+                        
         </nav>
 
     </div>
@@ -94,7 +105,7 @@
         <article class="blog-container">
             <div class="blog-container-overlay">
                 <h1>Just a work and uni kinda day...</h1>
-                <p class="blog-date"><time>2021, Apr 21, Tue</time></p>
+                <p class="blog-date"><time>2021, April 27, Tue</time></p>
                 <p>Now that I have a system (kinda) working with Hugo and Neocities, I can focus on just writing my blog! Yay. Today, I just went to work and had classes between my shifts. To be honest, the whole day, I was just thinking about how I can get my website to automatically push itself to Neocities&hellip; 😆</p>
 <p>I think I might&rsquo;ve figured it out by using the Github actions: <a href="https://github.com/marketplace/actions/deploy-to-neocities">Deploy to Neocities</a>. I&rsquo;ll update to let you know if it actually works.</p>
 <p>Class today was fun&hellip; We just played around with inks and the like. Messy, but fun.</p>
@@ -130,72 +141,54 @@ To-do:
   </div>
   <div id="search-results" style="display:none;"></div>
   <div id="sidebars">
-    <div>
-      <h2 class="mt-4 taxonomy" id="archives-section"></h2>
-      <nav class="tags_nav">
-        <a href='http://bomby.neocities.org/archives/2021/april/' class="post_tag button button_translucent" title="2021/april">
-          2021/APRIL
-          <span class="button_tally">4</span>
-        </a>
+    <div class="widget leftalign">
+    <h3 style="display: inline">Tags:</h3> <br>
+    <div id="tags-container">
         
+        <div class="tags"><a href="http://bomby.neocities.org//tags/blog">blog <div id="tag-count">2</div></a></div>
         
-      </nav>
+        <div class="tags"><a href="http://bomby.neocities.org//tags/dev">dev <div id="tag-count">4</div></a></div>
+        
+        <div class="tags"><a href="http://bomby.neocities.org//tags/hugo">hugo <div id="tag-count">3</div></a></div>
+        
+        <div class="tags"><a href="http://bomby.neocities.org//tags/life">life <div id="tag-count">2</div></a></div>
+        
     </div>
-    <div>
-      <h2 class="mt-4 taxonomy" id="categories-section"></h2>
-      <nav class="tags_nav">
-        <a href='http://bomby.neocities.org/categories/blog/' class="post_tag button button_translucent" title="blog">
-          BLOG
-          <span class="button_tally">4</span>
-        </a>
-        
-        
-      </nav>
-    </div>
-    <div>
-      <h2 class="mt-4 taxonomy" id="tags-section"></h2>
-      <nav class="tags_nav">
-        <a href='http://bomby.neocities.org/tags/dev/' class="post_tag button button_translucent" title="dev">
-          DEV
-          <span class="button_tally">3</span>
-        </a>
-        
-        <a href='http://bomby.neocities.org/tags/hugo/' class="post_tag button button_translucent" title="hugo">
-          HUGO
-          <span class="button_tally">3</span>
-        </a>
-        
-        <a href='http://bomby.neocities.org/tags/blog/' class="post_tag button button_translucent" title="blog">
-          BLOG
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='http://bomby.neocities.org/tags/life/' class="post_tag button button_translucent" title="life">
-          LIFE
-          <span class="button_tally">1</span>
-        </a>
-        
-        
-      </nav>
-    </div>
-
-        <div class="widget leftalign">
-    <h3 style="display: inline">Archive:</h3>
+</div>
+    <br>
+    <div class="widget leftalign">
+    <h3 style="display: inline">Categories:</h3>
     <select id="dropdown-archive" onchange="location = this.value;">
-        <option>A blast to the past!</option>
+        <option>What type of content?</option>
         
-        <option value="http://bomby.neocities.org//archives/2021/april"><a href=""></a>2021/april (4)</a>
+        <option value="http://bomby.neocities.org//categories/blog"><a href=""></a>blog (5)</a>
         </option>
         
     </select>
     <div id="list-archive">
         
-        <option><a href="http://bomby.neocities.org//archives/2021/april">2021/april (4)</a></option>
+        <option><a href="http://bomby.neocities.org//categories/blog">blog (5)</a></option>
         
     </div>
 </div>
+    <br>
+    <div class="widget leftalign">
+    <h3 style="display: inline">Archive:</h3>
+    <select id="dropdown-archive" onchange="location = this.value;">
+        <option>A blast to the past!</option>
+        
+        <option value="http://bomby.neocities.org//archives/2021/april"><a href=""></a>2021/april (5)</a>
+        </option>
+        
+    </select>
+    <div id="list-archive">
+        
+        <option><a href="http://bomby.neocities.org//archives/2021/april">2021/april (5)</a></option>
+        
     </div>
+</div>
   </div>
+</div>
 </div>
 </div>
 </div>

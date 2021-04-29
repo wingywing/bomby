@@ -1,8 +1,8 @@
 <header class="site-header">
   <div id="banner-img-container">
     <p class="welcome-txt"> Welcome to...</p>
-    <a href="https://bomby.neocities.org/">
-        <h1><img class="banner-img" src="/images/banner.png" alt="Banner saying Bomby's Website"></h1>
+    <a href="{{ .Site.BaseURL }}">
+        <h1><div id="banner-img"></h1>
     </a>
 </div>
   <nav class="site-nav">
@@ -15,4 +15,5 @@
       {{ end }}
     </div>
   </nav>
+  {{ partial "changecolour.html" }}
 </header>

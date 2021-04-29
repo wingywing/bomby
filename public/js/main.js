@@ -1,9 +1,9 @@
 // Toggles whether the buttons are visible or not under the header
-let collapse = document.getElementById("togglestamps-button");
+collapse = document.getElementById("togglestamps-button");
 collapse.addEventListener("click", collapseButtons);
 
 //Makes the buttons either bigger or smaller
-let toggle = document.getElementById("toggleButtonSize-button");
+toggle = document.getElementById("toggleButtonSize-button");
 toggle.addEventListener("click", changeButtonSize)
 
 function collapseButtons() {
@@ -26,3 +26,6 @@ function changeButtonSize() {
             i++;
         }
 }
+
+
+// //Darkmode

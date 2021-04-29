@@ -26,6 +26,23 @@
     --almostblack: #362f26;
     --almostwhite: #faf0e6;
     --gray: #808080;
+    --blog-container-overlay:  rgba(255, 255, 255, 0.90);
+    --white: white;
+    --backgroundimg: url("../images/sky.gif");
+    --bannerimg: url("../images/banner.png")
+}
+
+[data-theme="dark"] {
+    --button-height: 31px;
+    --bgorange: rgb(255, 127, 39);
+    --orange: #ffa500;
+    --yellow: #ffff00;
+    --almostblack: #faf0e6;
+    --almostwhite: #362f26;
+    --blog-container-overlay:  rgba(54, 47, 38, 0.90);
+    --white: #24201a;
+    --backgroundimg: url("../images/darksky.gif");
+    --bannerimg: url("../images/bannerdarkmode.png")
 }
 
 a {
@@ -40,7 +57,7 @@ body {
     height: 100%;
     padding: 10px 5% 10% 5%;
     background-attachment: scroll;
-    background-image: url("../images/sky.gif");
+    background-image: var(--backgroundimg);
     background-size: fill;
     background-color: var(--bgorange);
     background-repeat: repeat-x;
@@ -95,13 +112,14 @@ p {
     position: relative;
 }
 
-.banner-img {
+#banner-img {
     text-align: center;
     width: 70%;
     position: relative;
     top: 25%;
     margin-left: 50%;
     transform: translateX(-50%);
+    content: var(--bannerimg);
 }
 
 .stamp {
@@ -212,6 +230,7 @@ p {
     border: none;
     scrollbar-width: thin;
     scrollbar-color: var(--orange) var(--yellow);
+    overflow: scroll;
 }
 
 #updates-container {
@@ -248,9 +267,9 @@ p {
 /* Blog stuff */
 
 .blog-container {
-    background-image: url("/images/NewLeafPattern.jpg");
+    background-image: url("/images/NewLeafPattern.png");
     background-repeat: repeat-x repeat-y;
-    background-color: white;
+    background-color: var(--white);
     background-size: 300px;
     border-radius: 10px;
     padding: 50px;
@@ -261,7 +280,7 @@ p {
 }
 
 .blog-container-overlay {
-    background-color: rgba(255, 255, 255, 0.90);
+    background-color: var(--blog-container-overlay);
     padding: 10px;
     border-radius: 10px;
 }
@@ -390,6 +409,24 @@ footer {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
+
+.changecolour-button {
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    left: 2px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+}
+
 #dropdown-archive {
     display: none;
 }
@@ -398,7 +435,7 @@ footer {
 }
 
 .tags {
-    background-color: var(--bgorange);
+    background-color: #ffc90e;
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
@@ -407,11 +444,12 @@ footer {
     padding: 5px 10px 5px 10px;
     border-radius: 20px;
     margin-top: 10px;
-    color: var(--almostblack);
+    color: #362f26;
 }
 
 .tags a {
     text-decoration: none;
+    color: #362f26;
 }
 
 #tag-count{
@@ -438,7 +476,7 @@ footer {
 }
 
 @media (max-width: 800px) {
-    .banner-img {
+    #banner-img {
         width: 100%;
         position: relative;
         top: 0%;
@@ -487,11 +525,14 @@ footer {
         height: 64px;
         bottom: 20px;
     }
+    .changecolour-button {
+        height: 64px;
+        bottom: 10px;
+    }
     #dropdown-archive {
         display: block;
     }
     #list-archive {
         display: none;
     }
-    
 }
