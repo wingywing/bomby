@@ -439,11 +439,17 @@ footer {
 
 @media (max-width: 800px) {
     .banner-img {
-        padding: 0px;
-        margin: 0px;
+        width: 100%;
+        position: relative;
+        top: 0%;
+        margin-left: 0%;
+        transform: none;
+    }
+
     body {
         padding: 0px;
     }
+
     #left-container {
         margin: 0px 10px 20px 10px;
         padding: 0px 10px 20px 10px;
