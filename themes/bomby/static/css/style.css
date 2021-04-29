@@ -29,7 +29,7 @@
     --blog-container-overlay:  rgba(255, 255, 255, 0.90);
     --white: white;
     --backgroundimg: url("../images/sky.gif");
-    --bannerimg: url("../images/banner.png")
+    --bannerimg: url("../images/banner.png");
 }
 
 [data-theme="dark"] {
@@ -42,7 +42,7 @@
     --blog-container-overlay:  rgba(54, 47, 38, 0.90);
     --white: #24201a;
     --backgroundimg: url("../images/darksky.gif");
-    --bannerimg: url("../images/bannerdarkmode.png")
+    --bannerimg: url("../images/bannerdarkmode.png");
 }
 
 a {
