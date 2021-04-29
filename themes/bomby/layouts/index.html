@@ -58,7 +58,7 @@
                     {{ range first 1 .Site.Taxonomies.categories.blog }}
 
                     <h3 class="blog-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-                    <p class="blog-date"><time>{{ dateFormat "2006, Jan 06, Mon" .Date }}</time></p>
+                    <p class="blog-date"><time>{{ $.Date.Format "2006, January 2, Mon" }}</time></p>
                     <div class="blog-image-overflow">
                     </div>
                     <p class="blog-caption">
