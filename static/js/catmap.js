@@ -3,10 +3,12 @@ let map, popup, Popup;
 /** Initializes the map and the custom popup. */
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 21.8467391, lng: 23.123628 },
+    center: { lat:8.6226312, lng: 25.8756613 },
     zoom: 3,
+    mapTypeId: 'roadmap',
+    disableDefaultUI: true
   });
-
+  map.setOptions({ styles: styles["default"] });
   /**
    * A customized popup on the map.
    */
@@ -57,9 +59,203 @@ function initMap() {
       }
     }
   }
-  popup = new Popup(
+  hello = new Popup(
     new google.maps.LatLng(-33.866, 151.196),
     document.getElementById("content")
   );
-  popup.setMap(map);
+  hello.setMap(map);
 }
+const styles = { //Custom style from SnazzyMaps.com
+  default: 
+    [
+      {
+          "featureType": "administrative",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "administrative.country",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "visibility": "on"
+              }
+          ]
+      },
+      {
+          "featureType": "administrative.country",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "visibility": "on"
+              }
+          ]
+      },
+      {
+          "featureType": "administrative.country",
+          "elementType": "geometry.stroke",
+          "stylers": [
+              {
+                  "color": "#bc882f"
+              }
+          ]
+      },
+      {
+          "featureType": "landscape.man_made",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "landscape.natural",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "color": "#ffe9d0"
+                  
+              }
+          ]
+      },
+      {
+          "featureType": "landscape.natural.landcover",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "visibility": "off"
+              },
+              {
+                  "hue": "#ff0000"
+              }
+          ]
+      },
+      {
+          "featureType": "landscape.natural.terrain",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "saturation": "7"
+              },
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "poi",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "poi",
+          "elementType": "geometry.fill",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "poi.attraction",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "poi.business",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "poi.government",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "poi.medical",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "poi.park",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "poi.place_of_worship",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "road",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "transit",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "water",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "color": "#c0ddf0"
+              }
+          ]
+      },
+      {
+          "featureType": "water",
+          "elementType": "geometry.fill",
+          "stylers": [
+              {
+                  "saturation": "10"
+              }
+          ]
+      }
+  ]
+  ,
+  
+};
