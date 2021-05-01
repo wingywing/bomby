@@ -6,13 +6,29 @@
     <description>Recent content in Blogs on Bomby&#39;s Website!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Apr 2021 09:00:30 +1500</lastBuildDate><atom:link href="http://bomby.neocities.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 May 2021 20:06:13 +1500</lastBuildDate><atom:link href="http://bomby.neocities.org/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Class!</title>
+      <title>Catmap</title>
       <link>http://bomby.neocities.org/blog/2021-04-30/</link>
-      <pubDate>Fri, 30 Apr 2021 09:00:30 +1500</pubDate>
+      <pubDate>Sat, 01 May 2021 20:06:13 +1500</pubDate>
       
       <guid>http://bomby.neocities.org/blog/2021-04-30/</guid>
+      <description>&lt;p&gt;Today, I tried to do something cool for my upcoming assignment with code.&lt;br&gt;
+Unfortunately, being the big noob I am, I couldn&amp;rsquo;t really figure it out.&lt;br&gt;
+I wanted to create a map with pictures overlaid on certain coordinates, and tried to use &lt;a href=&#34;https://openlayers.org/&#34;&gt;OpenLayers&lt;/a&gt; to do it.&lt;br&gt;
+For most of the day, I was figuring out how to use npm and browserify to run packages&amp;hellip;  I&amp;rsquo;m happy that I learnt how to use them!&lt;/p&gt;
+&lt;p&gt;As for the map, I actually did manage to embed it onto the page, but I couldn&amp;rsquo;t understand how to project a static image onto specific coordinates.&lt;br&gt;
+You can take a look &lt;a href=&#34;http://bomby.neocities.org/projects/catmap/&#34;&gt;here&lt;/a&gt;! 
+Not exciting at all since it&amp;rsquo;s just a map, but it&amp;rsquo;s better than nothing. 😭&lt;/p&gt;
+&lt;p&gt;I might try to use Google Maps API instead just because the documentation is easier to read (for me).&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Class!</title>
+      <link>http://bomby.neocities.org/blog/2021-05-01/</link>
+      <pubDate>Fri, 30 Apr 2021 09:00:30 +1500</pubDate>
+      
+      <guid>http://bomby.neocities.org/blog/2021-05-01/</guid>
       <description>&lt;p&gt;I swear 9am lectures are my worst enemies&amp;hellip; Especially when the next class is at 1:30pm!! They should&amp;rsquo;ve just kept the lecture before class&amp;hellip; It&amp;rsquo;s not the worst thing in the world though, since I usually go to a cafe with my friends in the down-time.&lt;/p&gt;
 &lt;p&gt;
 
