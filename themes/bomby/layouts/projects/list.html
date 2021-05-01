@@ -1,0 +1,24 @@
+{{ partial "header.html" . }}
+
+{{ .Content }}
+
+<div class="body-container" id="project-body-container">
+  {{ range .Pages.ByPublishDate.Reverse }}
+  <article class="blog-container" id="project-container">
+    <div class="blog-container-overlay" id="project-container-overlay">
+      <div class="project-list-flexbox">
+        <div class="project-image-preview-container">
+          <img class="project-image-preview" src="{{ .Param "image" }}" alt="{{ .Param "imagealt"}}">
+        </div>
+        <div class="project-info-container">
+          <h3 class="blog-title" id="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p class="blog-date" id="project-date">{{ .Date.Format "2006, January" }}</p>
+          <p class="blog-caption" id="project-caption">{{ .Summary }}</p>
+        </div>
+      </div>
+    </div>
+  </article>
+  {{ end }}
+</div>
+
+{{ partial "footer.html" . }}

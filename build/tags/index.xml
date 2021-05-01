@@ -6,13 +6,40 @@
     <description>Recent content in Tags on Bomby&#39;s Website!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Apr 2021 07:26:57 +1500</lastBuildDate><atom:link href="http://bomby.neocities.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Apr 2021 09:00:30 +1500</lastBuildDate><atom:link href="http://bomby.neocities.org/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>blog</title>
       <link>http://bomby.neocities.org/tags/blog/</link>
-      <pubDate>Thu, 29 Apr 2021 07:26:57 +1500</pubDate>
+      <pubDate>Fri, 30 Apr 2021 09:00:30 +1500</pubDate>
       
       <guid>http://bomby.neocities.org/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>funny</title>
+      <link>http://bomby.neocities.org/tags/funny/</link>
+      <pubDate>Fri, 30 Apr 2021 09:00:30 +1500</pubDate>
+      
+      <guid>http://bomby.neocities.org/tags/funny/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>http://bomby.neocities.org/tags/life/</link>
+      <pubDate>Fri, 30 Apr 2021 09:00:30 +1500</pubDate>
+      
+      <guid>http://bomby.neocities.org/tags/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>uni</title>
+      <link>http://bomby.neocities.org/tags/uni/</link>
+      <pubDate>Fri, 30 Apr 2021 09:00:30 +1500</pubDate>
+      
+      <guid>http://bomby.neocities.org/tags/uni/</guid>
       <description></description>
     </item>
     
@@ -22,15 +49,6 @@
       <pubDate>Thu, 29 Apr 2021 07:26:57 +1500</pubDate>
       
       <guid>http://bomby.neocities.org/tags/dev/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>life</title>
-      <link>http://bomby.neocities.org/tags/life/</link>
-      <pubDate>Thu, 29 Apr 2021 07:26:57 +1500</pubDate>
-      
-      <guid>http://bomby.neocities.org/tags/life/</guid>
       <description></description>
     </item>
     
