@@ -1,3 +1,5 @@
+console.log("lol u snoopin? o:");
+
 // Toggles whether the buttons are visible or not under the header
 let collapse = document.getElementById("togglestamps-button");
 collapse.addEventListener("click", collapseButtons);

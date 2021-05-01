@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Bomby&#39;s Website!</title>
+    <link>http://bomby.neocities.org/projects/</link>
+    <description>Recent content in Projects on Bomby&#39;s Website!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 25 Apr 2021 23:14:57 +1500</lastBuildDate><atom:link href="http://bomby.neocities.org/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>World map of cat-worshipping trends</title>
+      <link>http://bomby.neocities.org/projects/catmap/</link>
+      <pubDate>Sun, 25 Apr 2021 23:14:57 +1500</pubDate>
+      
+      <guid>http://bomby.neocities.org/projects/catmap/</guid>
+      <description>A world map with 100 images showing the power dynamic of cats over humans overlaid. This is a university project made to show how icons and their associated meanings change across time and space.</description>
+    </item>
+    
+  </channel>
+</rss>
