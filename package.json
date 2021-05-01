@@ -1,39 +1,40 @@
 {
-  "name": "bomby",
-  "version": "1.0.0",
-  "description": "![Build Status](https://gitlab.com/pages/neocities/badges/master/build.svg)",
-  "main": "index.js",
+  "name": "ts-webpack-googlemaps-sample",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify -g [ babelify --presets [ \"@babel/preset-env\" ] ] -g uglifyify --entry ./src/js/catmap.js > ./static/js/catmap.js && npm run hugo:build",
-    "browserify" : "browserify -g [ babelify --presets [ \"@babel/preset-env\" ] ] -g uglifyify --entry ./src/js/catmap.js > ./static/js/catmap.js",
-    "serve": "npm run hugo:serve",
-    "hugo:build": "hugo -d build",
-    "hugo:serve": "hugo server",
-    "hugo:clean": "rm -rf build resources public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://gitlab.com/wingywing/bomby.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://gitlab.com/wingywing/bomby/issues"
-  },
-  "homepage": "https://gitlab.com/wingywing/bomby#readme",
-  "dependencies": {
-    "browserify-shim": "^3.8.14",
-    "express": "^4.17.1",
-    "hugo": "0.0.3",
-    "ol": "^5.1.3",
-    "save": "^2.4.0"
+    "build": "webpack --config ./webpack.prod.js --mode production",
+    "dev": "webpack-cli serve --config ./webpack.dev.js",
+    "format": "eslint --fix src/*.ts",
+    "lint": "eslint src/*.ts",
+    "test": "jest --passWithNoTests src/*",
+    "watch": "webpack --config ./webpack.dev.js --mode development"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.56",
-    "@babel/preset-env": "^7.0.0-beta.56",
-    "babelify": "^9.0.0",
-    "browserify": "^16.2.2",
-    "uglifyify": "^5.0.1"
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/runtime": "^7.12.18",
+    "@types/google.maps": "^3.44.2",
+    "@types/jest": "^26.0.20",
+    "@types/webpack-env": "^1.16.0",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.16.1",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.1.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "html-replace-webpack-plugin": "^2.6.0",
+    "html-webpack-plugin": "^5.3.0",
+    "jest": "^26.6.3",
+    "mini-css-extract-plugin": "^1.3.9",
+    "prettier": "^2.2.1",
+    "terser-webpack-plugin": "^5.1.1",
+    "ts-jest": "^26.5.1",
+    "ts-loader": "^8.0.17",
+    "typescript": "^4.2.4",
+    "webpack": "^5.24.3",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^4.0.0-beta.2",
+    "webpack-merge": "^5.7.3"
   }
 }

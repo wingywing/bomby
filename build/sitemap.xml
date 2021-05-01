@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://bomby.neocities.org/</loc>
+    <lastmod>2021-05-01T20:23:19+15:00</lastmod>
+  </url><url>
+    <loc>http://bomby.neocities.org/projects/</loc>
+    <lastmod>2021-05-01T20:23:19+15:00</lastmod>
+  </url><url>
+    <loc>http://bomby.neocities.org/projects/catmap/</loc>
+    <lastmod>2021-05-01T20:23:19+15:00</lastmod>
+  </url><url>
     <loc>http://bomby.neocities.org/tags/blog/</loc>
     <lastmod>2021-05-01T20:06:13+15:00</lastmod>
   </url><url>
@@ -11,13 +20,10 @@
     <loc>http://bomby.neocities.org/blog/</loc>
     <lastmod>2021-05-01T20:06:13+15:00</lastmod>
   </url><url>
-    <loc>http://bomby.neocities.org/</loc>
-    <lastmod>2021-05-01T20:06:13+15:00</lastmod>
-  </url><url>
     <loc>http://bomby.neocities.org/categories/</loc>
     <lastmod>2021-05-01T20:06:13+15:00</lastmod>
   </url><url>
-    <loc>http://bomby.neocities.org/blog/2021-04-30/</loc>
+    <loc>http://bomby.neocities.org/blog/2021-05-01/</loc>
     <lastmod>2021-05-01T20:06:13+15:00</lastmod>
   </url><url>
     <loc>http://bomby.neocities.org/tags/dev/</loc>
@@ -29,7 +35,7 @@
     <loc>http://bomby.neocities.org/tags/uni/</loc>
     <lastmod>2021-05-01T20:06:13+15:00</lastmod>
   </url><url>
-    <loc>http://bomby.neocities.org/blog/2021-05-01/</loc>
+    <loc>http://bomby.neocities.org/blog/2021-04-30/</loc>
     <lastmod>2021-04-30T09:00:30+15:00</lastmod>
   </url><url>
     <loc>http://bomby.neocities.org/tags/funny/</loc>
@@ -54,12 +60,6 @@
     <lastmod>2021-04-26T23:14:57+15:00</lastmod>
   </url><url>
     <loc>http://bomby.neocities.org/blog/2021-04-25/</loc>
-    <lastmod>2021-04-25T23:14:57+15:00</lastmod>
-  </url><url>
-    <loc>http://bomby.neocities.org/projects/</loc>
-    <lastmod>2021-04-25T23:14:57+15:00</lastmod>
-  </url><url>
-    <loc>http://bomby.neocities.org/projects/catmap/</loc>
     <lastmod>2021-04-25T23:14:57+15:00</lastmod>
   </url><url>
     <loc>http://bomby.neocities.org/archives/2021/april/</loc>

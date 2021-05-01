@@ -8,6 +8,7 @@
     <title>World map of cat-worshipping trends | Bomby&#39;s Website!</title>
     
     <link href="/css/catmap/style.css" rel="stylesheet" type="text/css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
@@ -15,8 +16,13 @@
 
 <body>
     <p>catmap</p>
+
     <div id="map" class="map"></div>
     <script src="/js/catmap.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYKyo4QBn9hkVJ8WWTU085OrGBs1GZ_lY&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
 </body>
 
 </html>
