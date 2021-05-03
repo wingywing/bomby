@@ -397,7 +397,7 @@ footer {
 }
 #project-body-container {
     text-align: left;
-    margin: 20px;
+    margin: 20px 30px 20px 30px;
 }
 
 #project-container {
@@ -433,7 +433,7 @@ footer {
 /* WIP Layout */
 
 #wip-container {
-    margin: 20px;
+    margin: 20px 30px 20px 30px;
 }
 
 
