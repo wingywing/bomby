@@ -1,15 +1,29 @@
 {{ partial "header.html" . }}
 
 <div id="blog-flex-container">
-    <div class="body-container" id="blog-bodycontainer">
-        <article class="blog-container">
-            <div class="blog-container-overlay">
-                <h1>{{ .Title }}</h1>
-                <p class="blog-date"><time>{{ .Date.Format "2006, January 2, Mon" }}</time></p>
-                {{ .Content }}
+    <div id="blog-left-flex-container">
+        <div class="body-container" id="blog-bodycontainer">
+            <article class="blog-container">
+                <div class="blog-container-overlay">
+                    <h1>{{ .Title }}</h1>
+                    <p class="blog-date"><time>{{ .Date.Format "2006, January 2, Mon" }}</time></p>
+                    {{ .Content }}
+                </div>
+            </article>
+        </div>
+        <div class="body-container" id="blog-comment-container">
+            <!-- begin wwww.htmlcommentbox.com -->
+            <div id="HCB_comment_box">Comments are loading! <br> <img src="http://pa1.narvii.com/7064/16627aec9acb1ee3f185f46d27132039c4dfa18f_00.gif">
             </div>
-        </article>
+            <link rel="stylesheet" type="text/css"
+                href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+            <script type="text/javascript"
+                id="hcb"> /*<!--*/ if (!window.hcb_user) { hcb_user = {}; } (function () { var s = document.createElement("script"), l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"), h = "https://www.htmlcommentbox.com"; s.setAttribute("type", "text/javascript"); s.setAttribute("src", h + "/jread?page=" + encodeURIComponent(l).replace("+", "%2B") + "&opts=16862&num=10&ts=1620037168126"); if (typeof s != "undefined") document.getElementsByTagName("head")[0].appendChild(s); })(); /*-->*/</script>
+            <!-- end www.htmlcommentbox.com -->
+        </div>
     </div>
+    
+
     {{ partial "sidebar.html" . }}
 </div>
 

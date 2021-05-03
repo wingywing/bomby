@@ -105,12 +105,13 @@
         
 
 <div id="blog-flex-container">
-    <div class="body-container" id="blog-bodycontainer">
-        <article class="blog-container">
-            <div class="blog-container-overlay">
-                <h1>Posting from mobile...?</h1>
-                <p class="blog-date"><time>2021, April 29, Thu</time></p>
-                <p>I just downloaded the app <a href="https://apps.apple.com/au/app/working-copy-git-client/id896694807">Working Copy</a> on my iPhone so that I can clone my git repository and create markdown files on the go!  I also got the app <a href="https://apps.apple.com/au/app/bear/id1016366447">Bear</a> for nicer mark-down editing.</p>
+    <div id="blog-left-flex-container">
+        <div class="body-container" id="blog-bodycontainer">
+            <article class="blog-container">
+                <div class="blog-container-overlay">
+                    <h1>Posting from mobile...?</h1>
+                    <p class="blog-date"><time>2021, April 29, Thu</time></p>
+                    <p>I just downloaded the app <a href="https://apps.apple.com/au/app/working-copy-git-client/id896694807">Working Copy</a> on my iPhone so that I can clone my git repository and create markdown files on the go!  I also got the app <a href="https://apps.apple.com/au/app/bear/id1016366447">Bear</a> for nicer mark-down editing.</p>
 <p>
 
 
@@ -136,9 +137,22 @@ To-do: <br>
 5. Add a mood tracker on the top corner of each blog post.
 
 </p>
+                </div>
+            </article>
+        </div>
+        <div class="body-container" id="blog-comment-container">
+            
+            <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Form</a> is loading comments...
             </div>
-        </article>
+            <link rel="stylesheet" type="text/css"
+                href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+            <script type="text/javascript"
+                id="hcb">   if (!window.hcb_user) { hcb_user = {}; } (function () { var s = document.createElement("script"), l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"), h = "https://www.htmlcommentbox.com"; s.setAttribute("type", "text/javascript"); s.setAttribute("src", h + "/jread?page=" + encodeURIComponent(l).replace("+", "%2B") + "&opts=16862&num=10&ts=1620037168126"); if (typeof s != "undefined") document.getElementsByTagName("head")[0].appendChild(s); })();  </script>
+            
+        </div>
     </div>
+    
+
     <div class="body-container" id="blog-tagcontainer">
   <div class="search-container">
     <input id="search-query" placeholder="What are you looking for?">
@@ -149,7 +163,9 @@ To-do: <br>
     <h3 style="display: inline">Tags:</h3> <br>
     <div id="tags-container">
         
-        <div class="tags"><a href="http://bomby.neocities.org//tags/blog">blog <div id="tag-count">4</div></a></div>
+        <div class="tags"><a href="http://bomby.neocities.org//tags/blog">blog <div id="tag-count">5</div></a></div>
+        
+        <div class="tags"><a href="http://bomby.neocities.org//tags/braindump">braindump <div id="tag-count">1</div></a></div>
         
         <div class="tags"><a href="http://bomby.neocities.org//tags/dev">dev <div id="tag-count">5</div></a></div>
         
@@ -157,7 +173,7 @@ To-do: <br>
         
         <div class="tags"><a href="http://bomby.neocities.org//tags/hugo">hugo <div id="tag-count">3</div></a></div>
         
-        <div class="tags"><a href="http://bomby.neocities.org//tags/life">life <div id="tag-count">3</div></a></div>
+        <div class="tags"><a href="http://bomby.neocities.org//tags/life">life <div id="tag-count">4</div></a></div>
         
         <div class="tags"><a href="http://bomby.neocities.org//tags/uni">uni <div id="tag-count">2</div></a></div>
         
@@ -169,14 +185,14 @@ To-do: <br>
     <select id="dropdown-archive" onchange="location = this.value;">
         <option>What type of content?</option>
         
-        <option value="http://bomby.neocities.org//categories/blog"><a href=""></a>blog (7)</a>
+        <option value="http://bomby.neocities.org//categories/blog"><a href=""></a>blog (8)</a>
         </option>
         
     </select>
     <div id="list-archive">
         <br>
         
-        <a href="http://bomby.neocities.org//categories/blog">blog (7)</a><br>
+        <a href="http://bomby.neocities.org//categories/blog">blog (8)</a><br>
         
     </div>
 </div>
@@ -189,7 +205,7 @@ To-do: <br>
         <option value="http://bomby.neocities.org//archives/2021/april"><a href=""></a>2021/april (6)</a>
         </option>
         
-        <option value="http://bomby.neocities.org//archives/2021/may"><a href=""></a>2021/may (1)</a>
+        <option value="http://bomby.neocities.org//archives/2021/may"><a href=""></a>2021/may (2)</a>
         </option>
         
     </select>
@@ -198,7 +214,7 @@ To-do: <br>
         
         <a href="http://bomby.neocities.org//archives/2021/april">2021/april (6)</a> <br>
         
-        <a href="http://bomby.neocities.org//archives/2021/may">2021/may (1)</a> <br>
+        <a href="http://bomby.neocities.org//archives/2021/may">2021/may (2)</a> <br>
         
     </div>
 </div>

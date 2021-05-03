@@ -343,6 +343,10 @@ p {
     margin: 20px 10px 20px 10px;
 }
 
+.blog-comment-container {
+    margin: 10px;
+}
+
 .search-container {
     display: flex;
     margin-bottom: 20px;
