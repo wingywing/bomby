@@ -466,6 +466,7 @@ footer {
 }
 #HCB_comment_box .comment a img {
     max-width: 100%;
+    border-radius: 10px;
 }
 #HCB_comment_box .hcb-comment-tb a {
     color: var(--gray);
