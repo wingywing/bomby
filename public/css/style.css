@@ -340,11 +340,12 @@ p {
 
 #blog-tagcontainer {
     flex: 20%;
-    margin: 20px 10px 20px 10px;
+    margin: 20px 10px 10px 10px;
 }
 
-.blog-comment-container {
+#blog-comment-container {
     margin: 10px;
+    padding: 10px;
 }
 
 .search-container {
@@ -379,6 +380,10 @@ mark{
 
 #blogpost-container {
     margin: 20px;
+}
+
+#blog-left-flex-container {
+    flex: 80%;
 }
 
 footer {
@@ -433,7 +438,12 @@ footer {
 
 
 /* Misc stuff */
-
+#HCB_comment_box {
+    font-family: OpenSansPX;
+}
+#HCB_comment_box a {
+    color: var(--bgorange);
+}
 .backtotop-button {
     position: fixed;
     /* Fixed/sticky position */
