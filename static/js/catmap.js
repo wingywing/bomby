@@ -65,11 +65,29 @@ function initMap() {
   );
   img1.setMap(map);
 
+  img27 = new Popup(
+    new google.maps.LatLng(25.850506953348784, 28.669480311777374),
+    document.getElementById("img27")
+  );
+  img27.setMap(map);
+
   img8 = new Popup(
     new google.maps.LatLng(35.71142831943841, 139.48462696889717),
     document.getElementById("img8")
   );
   img8.setMap(map);
+
+  img21 = new Popup(
+    new google.maps.LatLng(35.704209680323316, 139.5291928450757),
+    document.getElementById("img21")
+  );
+  img21.setMap(map);
+
+  img22 = new Popup(
+    new google.maps.LatLng(35.714209680323316, 139.5391928450757),
+    document.getElementById("img22")
+  );
+  img22.setMap(map);
 
   img2 = new Popup(
     new google.maps.LatLng(43.6539700254478, 6.924129006233555),
@@ -178,6 +196,54 @@ function initMap() {
     document.getElementById("img20")
   );
   img20.setMap(map);
+
+  img23 = new Popup(
+    new google.maps.LatLng(43.73129690767164, -79.39456893014044),
+    document.getElementById("img23")
+  );
+  img23.setMap(map);
+
+  img24 = new Popup(
+    new google.maps.LatLng(51.51104054473209, -0.15035639676851495),
+    document.getElementById("img24")
+  );
+  img24.setMap(map);
+
+  img25 = new Popup(
+    new google.maps.LatLng(51.51482482151681, -0.18681039511624134),
+    document.getElementById("img25")
+  );
+  img25.setMap(map);
+
+  img26 = new Popup(
+    new google.maps.LatLng(-37.6946610804612, 140.45652937874536),
+    document.getElementById("img26")
+  );
+  img26.setMap(map);
+
+  img28 = new Popup(
+    new google.maps.LatLng(6.717334740501138, -1.5465741520275156),
+    document.getElementById("img28")
+  );
+  img28.setMap(map);
+
+  img29 = new Popup(
+    new google.maps.LatLng(39.916472226101796, 116.39716532668957),
+    document.getElementById("img29")
+  );
+  img29.setMap(map);
+
+  img30 = new Popup(
+    new google.maps.LatLng(51.26223503403885, 4.390672252625484),
+    document.getElementById("img30")
+  );
+  img30.setMap(map);
+
+  img31 = new Popup(
+    new google.maps.LatLng(57.61593196850083, -4.956521331935193),
+    document.getElementById("img31")
+  );
+  img31.setMap(map);
 }
 const styles = { //Custom style from SnazzyMaps.com
   default: 
