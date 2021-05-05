@@ -445,6 +445,7 @@ footer {
 #HCB_comment_box {
     font-family: OpenSansPX;
     object-fit: contain;
+    text-align: left;
     font-size: 16px;
 }
 #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
@@ -455,6 +456,9 @@ footer {
     font-family: OpenSansPX;
     border-radius: 10px;
     font-size: 16px;
+}
+#HCB_comment_body {
+    text-align: left;
 }
 #HCB_comment_box .hcb-icon {
     display: none;
