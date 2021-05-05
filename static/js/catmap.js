@@ -59,6 +59,7 @@ function initMap() {
       }
     }
   }
+  // Images of cat
   img1 = new Popup(
     new google.maps.LatLng(35.737600675434315, 139.63567500839426),
     document.getElementById("img1")
