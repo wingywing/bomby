@@ -59,11 +59,66 @@ function initMap() {
       }
     }
   }
-  hello = new Popup(
-    new google.maps.LatLng(-33.866, 151.196),
-    document.getElementById("content")
+  img1 = new Popup(
+    new google.maps.LatLng(35.737600675434315, 139.63567500839426),
+    document.getElementById("img1")
   );
-  hello.setMap(map);
+  img1.setMap(map);
+
+  img8 = new Popup(
+    new google.maps.LatLng(35.71142831943841, 139.48462696889717),
+    document.getElementById("img8")
+  );
+  img8.setMap(map);
+
+  img2 = new Popup(
+    new google.maps.LatLng(43.6539700254478, 6.924129006233555),
+    document.getElementById("img2")
+  );
+  img2.setMap(map);
+
+  img3 = new Popup(
+    new google.maps.LatLng(34.44302249584373, 131.58759446944737),
+    document.getElementById("img3")
+  );
+  img3.setMap(map);
+
+  img4 = new Popup(
+    new google.maps.LatLng(30.57060038946036, 31.514864568765212),
+    document.getElementById("img4")
+  );
+  img4.setMap(map);
+
+  img5 = new Popup(
+    new google.maps.LatLng(51.51745024347428, -0.1311303232782981),
+    document.getElementById("img5")
+  );
+  img5.setMap(map);
+
+  img6 = new Popup(
+    new google.maps.LatLng(35.68409477589252, 139.746325060602),
+    document.getElementById("img6")
+  );
+  img6.setMap(map);
+
+  img7 = new Popup(
+    new google.maps.LatLng(-8.431993776966408, -78.80703040190785),
+    document.getElementById("img7")
+  );
+  img7.setMap(map);
+
+  img9 = new Popup(
+    new google.maps.LatLng(18.454271121646524, -102.65059763802265),
+    document.getElementById("img9")
+  );
+  img9.setMap(map);
+
+  img10 = new Popup(
+    new google.maps.LatLng(34.98993824907651, 135.71746003434885),
+    document.getElementById("img10")
+  );
+  img10.setMap(map);
+
 }
 const styles = { //Custom style from SnazzyMaps.com
   default: 
