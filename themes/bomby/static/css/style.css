@@ -340,7 +340,12 @@ p {
 
 #blog-tagcontainer {
     flex: 20%;
-    margin: 20px 10px 20px 10px;
+    margin: 20px 10px 10px 10px;
+}
+
+#blog-comment-container {
+    margin: 10px;
+    padding: 10px;
 }
 
 .search-container {
@@ -377,6 +382,10 @@ mark{
     margin: 20px;
 }
 
+#blog-left-flex-container {
+    flex: 80%;
+}
+
 footer {
     text-align: center;
 }
@@ -388,7 +397,7 @@ footer {
 }
 #project-body-container {
     text-align: left;
-    margin: 20px;
+    margin: 20px 30px 20px 30px;
 }
 
 #project-container {
@@ -424,12 +433,63 @@ footer {
 /* WIP Layout */
 
 #wip-container {
-    margin: 20px;
+    margin: 20px 30px 20px 30px;
 }
 
 
 /* Misc stuff */
-
+#HCB_comment_box h3 {
+    display: none;
+    font-size: 16px;
+}
+#HCB_comment_box {
+    font-family: OpenSansPX;
+    object-fit: contain;
+    text-align: left;
+    font-size: 16px;
+}
+#HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
+    background: var(--orange);
+    background-color: var(--almostblack);
+    border: none;
+    color: var(--almostwhite);
+    font-family: OpenSansPX;
+    border-radius: 10px;
+    font-size: 16px;
+}
+#HCB_comment_body {
+    text-align: left;
+}
+#HCB_comment_box .hcb-icon {
+    display: none;
+}
+#HCB_comment_box #hcb_form #hcb_settings {
+    text-decoration: none;
+    color: var(--almostblack);
+    font-size: 16px;
+}
+#HCB_comment_box .comment a img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+#HCB_comment_box .hcb-comment-tb a {
+    color: var(--gray);
+}
+#HCB_comment_box #hcb_form .home-desc a {
+    color: var(--gray);
+}
+#HCB_comment_box #hcb_form textarea, #HCB_comment_box  {
+    font-family: "OpenSansPX";
+    font-size: 16px;
+    padding: 8px;
+    margin: 0;
+}
+#HCB_comment_box #hcb_form textarea, #HCB_comment_box #hcb_form #hcb_form_name {
+    font-family: "OpenSansPX";
+    font-size: 16px;
+    padding: 8px;
+    margin: 0;
+}
 .backtotop-button {
     position: fixed;
     /* Fixed/sticky position */

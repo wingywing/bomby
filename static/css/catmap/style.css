@@ -23,14 +23,33 @@
         padding: 5px;
         border-radius: 5px;
         font-family: sans-serif;
-        overflow-y: auto;
-        max-height: 20px;
         border-color: burlywood;
         background-color: rgb(255, 255, 255);
         border-width: 5px;
         border-style: groove;
+        max-height: none;
+        text-align: center;
+      }
+
+
+      .catpic {
+        max-height: 100px;
+      }
+
+      .source {
+        display: none;
+      }
+
+      .popup-bubble:hover .source {
+        display: block;
+        font-size: 10px;
+        text-align: left;
       }
       
+      .popup-bubble:hover .catpic {
+        max-height: 300px;
+      }
+
       /* The parent of the bubble. A zero-height div at the top of the tip. */
       .popup-bubble-anchor {
         /* Position the div a fixed distance above the tip. */

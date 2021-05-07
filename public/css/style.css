@@ -340,7 +340,12 @@ p {
 
 #blog-tagcontainer {
     flex: 20%;
-    margin: 20px 10px 20px 10px;
+    margin: 20px 10px 10px 10px;
+}
+
+#blog-comment-container {
+    margin: 10px;
+    padding: 10px;
 }
 
 .search-container {
@@ -375,6 +380,10 @@ mark{
 
 #blogpost-container {
     margin: 20px;
+}
+
+#blog-left-flex-container {
+    flex: 80%;
 }
 
 footer {
@@ -429,7 +438,24 @@ footer {
 
 
 /* Misc stuff */
-
+#HCB_comment_box #hcb_form_content,
+#HCB_comment_box #hcb_form_email,
+#HCB_comment_box #hcb_form_name,
+#HCB_comment_box #hcb_form_website {
+    font-family: OpenSansPX;
+}
+#HCB_comment_box {
+    object-fit: contain;
+}
+#HCB_comment_box .submit {
+    background: var(--orange);
+    background-color: var(--almostblack);
+    border:1px solid var(--orange);
+    color: var(--almostwhite);
+  }
+#HCB_comment_box a {
+color: var(--orange);
+}
 .backtotop-button {
     position: fixed;
     /* Fixed/sticky position */
