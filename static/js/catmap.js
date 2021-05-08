@@ -6,7 +6,7 @@ function initMap() {
     center: { lat:8.6226312, lng: 25.8756613 },
     zoom: 3,
     mapTypeId: 'roadmap',
-    disableDefaultUI: true
+    disableDefaultUI: false
   });
   map.setOptions({ styles: styles["default"] });
   /**
@@ -65,6 +65,12 @@ function initMap() {
     document.getElementById("img1")
   );
   img1.setMap(map);
+
+  img41 = new Popup(
+    new google.maps.LatLng(35.612976687159055, 139.57231366026988),
+    document.getElementById("img41")
+  );
+  img41.setMap(map);
 
   img27 = new Popup(
     new google.maps.LatLng(25.850506953348784, 28.669480311777374),
@@ -300,6 +306,65 @@ function initMap() {
   );
   img40.setMap(map);
 
+  img42 = new Popup(
+    new google.maps.LatLng(45.496205741302724, 12.265079583042246),
+    document.getElementById("img42")
+  );
+  img42.setMap(map);
+
+  img43 = new Popup(
+    new google.maps.LatLng(48.8865578738251, 2.343690201268505),
+    document.getElementById("img43")
+  );
+  img43.setMap(map)
+  
+  img44 = new Popup(
+    new google.maps.LatLng(50.85517219252868, 0.5712007548399543),
+    document.getElementById("img44")
+  );
+  img44.setMap(map)
+  
+  img45 = new Popup(
+    new google.maps.LatLng(49.39121961115446, 0.1852045665162008),
+    document.getElementById("img45")
+  );
+  img45.setMap(map)
+
+  img46 = new Popup(
+    new google.maps.LatLng(65.04318362145241, -18.379313238428704),
+    document.getElementById("img46")
+  );
+  img46.setMap(map)
+
+  img47 = new Popup(
+    new google.maps.LatLng(25.728324274962887, 32.60134989562129),
+    document.getElementById("img47")
+  );
+  img47.setMap(map)
+  
+  img48 = new Popup(
+    new google.maps.LatLng(38.32504904378135, 23.316782423159992),
+    document.getElementById("img48")
+  );
+  img48.setMap(map)
+
+  img49 = new Popup(
+    new google.maps.LatLng(52.37146347061129, 4.900240357182804),
+    document.getElementById("img49")
+  );
+  img49.setMap(map)
+
+  img50 = new Popup(
+    new google.maps.LatLng(51.54197573505868, -0.13458413429731636),
+    document.getElementById("img50")
+  );
+  img50.setMap(map)
+  
+  img51 = new Popup(
+    new google.maps.LatLng(35.20274001975277, 102.09751990696466),
+    document.getElementById("img51")
+  );
+  img51.setMap(map)
 }
 const styles = { //Custom style from SnazzyMaps.com
   default: 
