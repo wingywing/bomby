@@ -420,6 +420,17 @@ function initMap() {
   );
   img60.setMap(map)
 
+  img61 = new Popup(
+    new google.maps.LatLng(35.15226433546096, 136.7924538559816),
+    document.getElementById("img61")
+  );
+  img61.setMap(map)
+
+  img62 = new Popup(
+    new google.maps.LatLng(-14.835332520878547, -74.93353854639768),
+    document.getElementById("img62")
+  );
+  img62.setMap(map)
 }
 const styles = { //Custom style from SnazzyMaps.com
   default: 
