@@ -601,6 +601,66 @@ function initMap() {
     document.getElementById("img90")
   );
   img90.setMap(map)
+                                          
+  img91 = new Popup(
+    new google.maps.LatLng(17.11776882918551, -99.57213776607244),
+    document.getElementById("img91")
+  );
+  img91.setMap(map)
+                                            
+  img92 = new Popup(
+    new google.maps.LatLng(-8.109254303422366, -79.02832073128056),
+    document.getElementById("img92")
+  );
+  img92.setMap(map)
+                                              
+  img93 = new Popup(
+    new google.maps.LatLng(-13.831348797718372, -76.24385128729608),
+    document.getElementById("img93")
+  );
+  img93.setMap(map)
+                                                
+  img94 = new Popup(
+    new google.maps.LatLng(34.730168304030016, 43.41016398936315),
+    document.getElementById("img94")
+  );
+  img94.setMap(map)
+                                                  
+  img95 = new Popup(
+    new google.maps.LatLng(29.991807916896143, 31.239775549057505),
+    document.getElementById("img95")
+  );
+  img95.setMap(map)
+                                                    
+  img96 = new Popup(
+    new google.maps.LatLng(8.654331219834695, -80.3611583839052),
+    document.getElementById("img96")
+  );
+  img96.setMap(map)
+                                                      
+  img97 = new Popup(
+    new google.maps.LatLng(-8.110735262780567, -79.0257562629279),
+    document.getElementById("img97")
+  );
+  img97.setMap(map)
+                                                        
+  img98 = new Popup(
+    new google.maps.LatLng(33.2941722250291, 46.0781029913824),
+    document.getElementById("img98")
+  );
+  img98.setMap(map)
+                                                          
+  img99 = new Popup(
+    new google.maps.LatLng(52.67142439909596, 18.759802352966403),
+    document.getElementById("img99")
+  );
+  img99.setMap(map)
+
+  img100 = new Popup(
+    new google.maps.LatLng(35.19055652363554, 139.0350249193814),
+    document.getElementById("img100")
+  );
+  img100.setMap(map)
 }
 const styles = { //Custom style from SnazzyMaps.com
   default: 
