@@ -6,7 +6,7 @@ function initMap() {
     center: { lat:8.6226312, lng: 25.8756613 },
     zoom: 3,
     mapTypeId: 'roadmap',
-    disableDefaultUI: false
+    disableDefaultUI: true
   });
   map.setOptions({ styles: styles["default"] });
   /**
