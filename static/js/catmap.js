@@ -479,6 +479,126 @@ function initMap() {
     document.getElementById("img70")
   );
   img70.setMap(map)
+      
+  img71 = new Popup(
+    new google.maps.LatLng(35.66027986633646, 139.7166970396179),
+    document.getElementById("img71")
+  );
+  img71.setMap(map)
+        
+  img72 = new Popup(
+    new google.maps.LatLng(35.66017993700967, 139.7167401028053),
+    document.getElementById("img72")
+  );
+  img72.setMap(map)
+          
+  img73 = new Popup(
+    new google.maps.LatLng(35.09849323872562, 33.10601902738333),
+    document.getElementById("img73")
+  );
+  img73.setMap(map)
+            
+  img74 = new Popup(
+    new google.maps.LatLng(39.56844401848013, -3.4832020374536987),
+    document.getElementById("img74")
+  );
+  img74.setMap(map)
+              
+  img75 = new Popup(
+    new google.maps.LatLng(41.55125371070584, -3.4832020374536987),
+    document.getElementById("img75")
+  );
+  img75.setMap(map)
+                
+  img76 = new Popup(
+    new google.maps.LatLng(27.18156076104778, 28.437479973602187),
+    document.getElementById("img76")
+  );
+  img76.setMap(map)
+                
+  img77 = new Popup(
+    new google.maps.LatLng(39.98531748165746, 116.46427464222555),
+    document.getElementById("img77")
+  );
+  img77.setMap(map)
+                  
+  img78 = new Popup(
+    new google.maps.LatLng(47.870662430337696, -18.940591377936443),
+    document.getElementById("img78")
+  );
+  img78.setMap(map)
+                    
+  img79 = new Popup(
+    new google.maps.LatLng(25.732392648732596, 32.59843272038621),
+    document.getElementById("img79")
+  );
+  img79.setMap(map)
+                      
+  img80 = new Popup(
+    new google.maps.LatLng(34.950653986743, 137.14241209639692),
+    document.getElementById("img80")
+  );
+  img80.setMap(map)
+                        
+  img81 = new Popup(
+    new google.maps.LatLng(35.165880062677225, 33.545472135731146),
+    document.getElementById("img81")
+  );
+  img81.setMap(map)
+                          
+  img82 = new Popup(
+    new google.maps.LatLng(25.61326471264487, 31.568573040474163),
+    document.getElementById("img82")
+  );
+  img82.setMap(map)
+                            
+  img83 = new Popup(
+    new google.maps.LatLng(25.29583020293835, 29.678924674578568),
+    document.getElementById("img83")
+  );
+  img83.setMap(map)
+                              
+  img84 = new Popup(
+    new google.maps.LatLng(13.201288010227962, 80.19601198340295),
+    document.getElementById("img84")
+  );
+  img84.setMap(map)
+                                
+  img85 = new Popup(
+    new google.maps.LatLng(27.636025509964913, 27.153367044403243),
+    document.getElementById("img85")
+  );
+  img85.setMap(map)
+                                  
+  img86 = new Popup(
+    new google.maps.LatLng(50.826446478906234, -0.13812044321901681),
+    document.getElementById("img86")
+  );
+  img86.setMap(map)
+                                    
+  img87 = new Popup(
+    new google.maps.LatLng(-8.11157089756616, -79.02522292626763),
+    document.getElementById("img87")
+  );
+  img87.setMap(map)
+                                      
+  img88 = new Popup(
+    new google.maps.LatLng(48.10530289524, 110.85953194771616),
+    document.getElementById("img88")
+  );
+  img88.setMap(map)
+                                        
+  img89 = new Popup(
+    new google.maps.LatLng(25.186591016540252, 75.8538126010322),
+    document.getElementById("img89")
+  );
+  img89.setMap(map)
+                                         
+  img90 = new Popup(
+    new google.maps.LatLng(-14.829814972788496, -74.92177974158918),
+    document.getElementById("img90")
+  );
+  img90.setMap(map)
 }
 const styles = { //Custom style from SnazzyMaps.com
   default: 
