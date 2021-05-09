@@ -7,7 +7,8 @@ function initMap() {
     zoom: 3,
     mapTypeId: 'roadmap',
     disableDefaultUI: true,
-    zoomControl: true
+    zoomControl: true,
+    fullscreenControl: true
   });
   map.setOptions({ styles: styles["default"] });
   /**
