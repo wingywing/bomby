@@ -1,6 +1,19 @@
 let map, popup, Popup;
 
 /** Initializes the map and the custom popup. */
+function hide() {
+  const fullScreenDiv = document.getElementById("full-div");
+  fullScreenDiv.style.opacity = '0'; 
+  toggleDisplay();
+};
+
+function toggleDisplay () {
+  setTimeout(() => {
+    const fullScreenDiv = document.getElementById("full-div");
+    fullScreenDiv.style.display = 'none';
+  }, 900);
+}
+
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat:8.6226312, lng: 25.8756613 },
