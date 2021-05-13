@@ -19,7 +19,6 @@
         background-color: ivory;
         padding: 50px;
         margin: 10%;
-        overflow: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -33,16 +32,17 @@
       #name {
         text-align: center;
         color: rgb(163, 163, 163);
-        margin-bottom: 40px;
       }
 
       #description {
-        margin: 20px 5% 50px 5%;
+        margin: 20px;
+        overflow: auto;
       }
 
       #enter {
         font-size: 16px;
         margin-left: auto;
+        margin-top: 10px;
         margin-right: auto;
         display:block
       }
@@ -133,3 +133,17 @@
         width: 200px;
       }
       
+      @media (max-width: 600px) {
+        .infobox {
+          padding: 20px;
+        }
+        #description {
+          margin-top: 40px;
+          margin-left: 0px;
+          margin-right: 0px;
+          margin-bottom: 40px;
+        }
+        h2 {
+          margin: 0px;
+        }
+      }
