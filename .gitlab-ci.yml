@@ -12,7 +12,7 @@ hugo:
       - public
       
 neocities:
-  image: ruby:2.6.5
+  image: ruby:3.2.3
   stage: deploy
   environment: neocities
   before_script:
