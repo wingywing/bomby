@@ -151,7 +151,6 @@ p {
     border: var(--almostblack);
     border-width: 5px;
     border-style: dashed dashed none dashed;
-    height: 10%;
 }
 
 .navbar {
@@ -174,7 +173,6 @@ p {
     border: var(--almostblack);
     border-width: 5px;
     border-style: none dashed dashed dashed;
-    height: 10%;
 }
 
 #stamps-text-container {
