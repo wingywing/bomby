@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<!--Meta-info in the <head>-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+    <!-- style.css file below. -->
+    <link href="/css/catmap/style.css" rel="stylesheet" type="text/css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    {{ with .OutputFormats.Get "rss" -}} {{ printf `
+    <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end
+    -}}
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+</head>
+
+<body>
+    <!-- Welcome box -->
+
+    <div class="full-screen-div" id="full-div"> 
+        <div class="infobox">
+        <h1 id="title">World Map of Cats</h1>
+        <p id="description">My work traces the origin of the domestication of cats, starting from Egypt and Asia, all the way to the geographically isolated island of Australia. The collection of images reveal changing perceptions of cats, transitioning from reverence, to fear, to finally adoration. <br><br> It was interesting to note that while wildcats have existed in the Americas, their representations in art is not as prominent as that of the African-Asiatic continent (excluding the portrayal of jaguars and other big cats).</p>
+        <button id="enter" onclick="hide()">Click here to enter!</button>
+        </div>
+    </div>
+
+    <div class="imagecontainer" id="img1">
+        <p><b>Image 1</b></p>
+        <a href="https://i.postimg.cc/Hny3FLD6/image.png"><img class="catpic" src="https://i.postimg.cc/Hny3FLD6/image.png" alt="Samurai walking a cat by Tetsuya N."></a>
+        <div class="source"><p>Tetsuya, N. (2014). <i>Warrior takes an armored cat for a walk (着甲武人猫散歩逍遥図)</i> [Painting]. Nerima Art Museum. https://blogs.lfpl.org/teen/wp-content/uploads/sites/2/2018/07/tetsuya_noguchi.jpg</p></div>
+    </div>
+    <div id="map" class="map"></div>
+
+    <div class="imagecontainer" id="img2">
+        <p><b>Image 2</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/f/f7/The_Cat%27s_Lunch.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/f/f7/The_Cat%27s_Lunch.jpg" alt="The Cat's Lunch by Marguerite Gérard"></a>
+        <div class="source"><p>Gérard, N. (ca. 1800). <i>The Cat's Lunch</i> [Painting]. Les Musées de Grasse. https://en.wikipedia.org/wiki/File:The_Cat%27s_Lunch.jpg</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img3">
+        <p><b>Image 3</b></p>
+        <a href="https://i.postimg.cc/fLN59N6F/image.png"><img class="catpic" src="https://i.postimg.cc/fLN59N6F/image.png" alt="Image of the entrance of the Unrinji cat shrine in Japan."></a>
+        <div class="source"><p>Hagishi. (2021). [Photograph of the Urinji (雲林寺) temple created to honour the spirit of a dead samurai’s cat]. https://www.hagishi.com/search/detail.php?d=1100241 </p></div>
+    </div>
+
+    <div class="imagecontainer" id="img4">
+        <p><b>Image 4</b></p>
+        <a href="https://cdn.britannica.com/53/155253-050-642F3524/Egyptian-cat-statue-Bastet.jpg"><img class="catpic" src="https://cdn.britannica.com/53/155253-050-642F3524/Egyptian-cat-statue-Bastet.jpg" alt="Photograph of a stature of Bastet, the Egyptian cat goddess."></a>
+        <div class="source"><p>Kathleen R Grilley. (2012). <i> Photograph of a stature of Bastet, the Egyptian cat goddess. </i> [Photograph]. Britannica. https://cdn.britannica.com/s:690x388,c:crop/53/155253-050-642F3524/Egyptian-cat-statue-Bastet.jpg</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img5">
+        <p><b>Image 5</b></p>
+        <a href="https://images1.bonhams.com/image?src=Images/live/2010-11/17/8214787-1-1.jpg"><img class="catpic" src="https://images1.bonhams.com/image?src=Images/live/2010-11/17/8214787-1-1.jpg" alt="The Bachelor Party painting by Louis Wain showing anthropomorphised cats in a bar."></a>
+        <div class="source"><p>Wain, L. (ca. 1860-1939). <i> The bachelor party </i> [Painting]. Bonhams. https://images1.bonhams.com/image?src=Images/live/2010-11/17/8214787-1-1.jpg</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img6">
+        <p><b>Image 6</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/b/b7/Suuhi_Nekomata.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Suuhi_Nekomata.jpg" alt="Painting of the cat demon Nekomata by Sawaki Suushi."></a>
+        <div class="source"><p>Suushi, S. (ca. 1707). <i> Nekomata </i> [Painting]. Wikimedia Commons. https://upload.wikimedia.org/wikipedia/commons/b/b7/Suuhi_Nekomata.jpg</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img7">
+        <p><b>Image 7</b></p>
+        <a href="https://i.postimg.cc/xC3tQ165/image.png"><img class="catpic" src="https://i.postimg.cc/xC3tQ165/image.png" alt="Ancient Peruvian ceremonial sculpture of a cat."></a>
+        <div class="source"><p>(ca. 21BCE). American Museum of Natural History. [Ceremonial statue of a grumpy cat]. BoingBoing. https://boingboing.net/2013/07/31/meet-ancient-perus-own-grump.html</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img8">
+        <p><b>Image 8</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/a/ac/Kuniyoshi_Ume_no_haru_gojusantsugi.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Kuniyoshi_Ume_no_haru_gojusantsugi.jpg" alt="Painting of a bakeneko (shafeshifting cat) by Utagawa Kuniyoshi."></a>
+        <div class="source"><p>Kuniyoshi, U. (1835). <i> Ume no haru gojūsantsugi (梅初春五十三駅) </i> [Painting]. Wikimedia Commons. https://upload.wikimedia.org/wikipedia/commons/a/ac/Kuniyoshi_Ume_no_haru_gojusantsugi.jpg</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img9">
+        <p><b>Image 9</b></p>
+        <a href="https://cdn.britannica.com/s:1500x700,q:85/57/9057-004-00041DD0/form-Tezcatlipoca-jaguar-yoke-ball-player-National.jpg"><img class="catpic" src="https://cdn.britannica.com/s:1500x700,q:85/57/9057-004-00041DD0/form-Tezcatlipoca-jaguar-yoke-ball-player-National.jpg" alt="Tezcatlipoca in the form of a jaguar, carved on a granite ball player's yoke."></a>
+        <div class="source"><p>Museum of Anthropology. (ca. 650-1000). [Tezcatlipoca in the form of a jaguar, carved on a granite ball player's yoke]. Encyclopædia Britannica. https://cdn.britannica.com/s:1500x700,q:85/57/9057-004-00041DD0/form-Tezcatlipoca-jaguar-yoke-ball-player-National.jpg</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img10">
+        <p><b>Image 10</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/0/0c/Koke_Raijuu.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Koke_Raijuu.jpg" alt="Drawing of the Japanese mythical beast Raiju by Ban Koke."></a>
+        <div class="source"><p>Koke, B. (1806). [Drawing of the Japanese mythical beast Raiju]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:Koke_Raijuu.jpg</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img11">
+        <p><b>Image 11</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/3/36/Underwater_panther_NMAI_GGH.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Underwater_panther_NMAI_GGH.jpg" alt="Ancient artwork of the Ojibwa mythical underwater panther Mishipeshu."></a>
+        <div class="source"><p>National Museum of the American Indian. (ca. 1850). [Ancient artwork of the Ojibwa mythical underwater panther Mishipeshu]. https://en.wikipedia.org/wiki/Underwater_panther#/media/File:Underwater_panther_NMAI_GGH.jpg</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img12">
+        <p><b>Image 12</b></p>
+        <a href="https://laurbedigital.com.ar/noticias/wp-content/uploads/2020/02/20200210-cultura-leyendas-000003.jpg"><img class="catpic" src="https://laurbedigital.com.ar/noticias/wp-content/uploads/2020/02/20200210-cultura-leyendas-000003.jpg" alt="Painting of the urban Argentinian legend – Hombre Gato (Catman)."></a>
+        <div class="source"><p>La Urbe Digital. (2014). [Painting of the urban Argentinian legend – Hombre Gato (Catman)]. https://laurbedigital.com.ar/noticias/2021/01/05/la-leyenda-del-hombre-gato/</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img13">
+        <p><b>Image 13</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/8/87/Louvre_egyptologie_21.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/8/87/Louvre_egyptologie_21.jpg" alt="Egyptian mummified cat."></a>
+        <div class="source"><p>Louvre Museum. (ca. 600-200 BCE) [Egyptian mummified cat]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:Louvre_egyptologie_21.jpg</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img14">
+        <p><b>Image 14</b></p>
+        <a href="https://i.postimg.cc/FKxXWcMs/image.png"><img class="catpic" src="https://i.postimg.cc/FKxXWcMs/image.png" alt="Wooden statue of an anthropomorphised kneeling cat from the Key Marco region in Florida."></a>
+        <div class="source"><p>Marco Island Historical Museum. (ca. 1020-1521). [Wooden statue of an anthropomorphised kneeling cat from the Key Marco region in Florida]. Smithsonian Magazine. https://www.smithsonianmag.com/sponsored/more-9-lives-preserved-against-odds-key-marco-cat-returning-marco-island-florida-180970215/</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img15">
+        <p><b>Image 15</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/6/61/Shashthi.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/6/61/Shashthi.jpg" alt="Painting of Shashti, the Indian goddess with her cat mount."></a>
+        <div class="source"><p>Victoria and Albert Museum. (ca. 1885). <i> Shashti </i> [Painting]. https://collections.vam.ac.uk/item/O71571/painting-shashthi-goddess-of-children-standing/shashthi-painting-unknown/</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img16">
+        <p><b>Image 16</b></p>
+        <a href="https://static.torontopubliclibrary.ca/ve/cinderella/images/18_white-cate_fp.jpg"><img class="catpic" src="https://static.torontopubliclibrary.ca/ve/cinderella/images/18_white-cate_fp.jpg" alt="Remake of the cover of the book The White Cat by Madam d’Aulnoy."></a>
+        <div class="source"><p>Blackburn, J. (1847). <i> The white cat. </i> [Cover of the book of the same name by Madam d’Aulnoy]. Toronto Public Library. https://static.torontopubliclibrary.ca/ve/cinderella/aulnoy.html</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img17">
+        <p><b>Image 17</b></p>
+        <a href="https://cdn.rbth.com/all/2017/04/28/Cats/01-bajun-b.jpg"><img class="catpic" src="https://cdn.rbth.com/all/2017/04/28/Cats/01-bajun-b.jpg" alt="Ink drawing of Russian mythical cat Baun."></a>
+        <div class="source"><p>Russia Beyond (2017). <i> Baun the cat </i> [Ink drawing]. https://www.rbth.com/arts/2017/05/22/8-compelling-cats-that-changed-russian-culture_767529</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img18">
+        <p><b>Image 18</b></p>
+        <a href="https://i.postimg.cc/hP3bgCdQ/image.png"><img class="catpic" src="https://i.postimg.cc/hP3bgCdQ/image.png" alt="Vietnamese painting by Dong Ho showing rats offering tributes to a cat."></a>
+        <div class="source"><p>Ho, D. (ca. 866-873). <i> Dam cuoi chuot (Rat Wedding) </i> [Painting]. Thanh Nien News. http://www.thanhniennews.com/arts-culture/ancient-vietnamese-painting-is-fading-21042.html</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img19">
+        <p><b>Image 19</b></p>
+        <a href="https://360tour.asia/wp-content/uploads/2019/05/catstatuemonument2-1024x576.jpg"><img class="catpic" src="https://360tour.asia/wp-content/uploads/2019/05/catstatuemonument2-1024x576.jpg" alt="A monument of a family of cats in Kuching city."></a>
+        <div class="source"><p>Kuching North City Council (1989). <i> The cat family </i> [Monument]. 360TourAsia. https://360tour.asia/the-cat-family-iconic-cat-monument-of-kuching-city/</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img20">
+        <p><b>Image 20</b></p>
+        <a href="https://i.postimg.cc/SNmtjtRZ/image.png"><img class="catpic" src="https://i.postimg.cc/SNmtjtRZ/image.png" alt="Drawing of Freyja with her cat carriage."></a>
+        <div class="source"><p>Unknown Artist. (1831). [Drawing of Freyja with her cat chariot]. http://www.germanicmythology.com/works/FREYJACATCARART.html</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img21">
+        <p><b>Image 21</b></p>
+        <a href="https://static.wikia.nocookie.net/studio-ghibli/images/3/30/Catbus.jpg"><img class="catpic" src="https://static.wikia.nocookie.net/studio-ghibli/images/3/30/Catbus.jpg" alt="Catbus from the Japanese movie Spirited Away."></a>
+        <div class="source"><p>Miyazaki, H. (2001). <i> Spirited away. </i> [Film]. Studio Ghibli.</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img22">
+        <p><b>Image 22</b></p>
+        <a href="https://static.wikia.nocookie.net/studio-ghibli/images/4/4f/Humbert_von_Gikkingen.jpg"><img class="catpic" src="https://static.wikia.nocookie.net/studio-ghibli/images/4/4f/Humbert_von_Gikkingen.jpg" alt="Baron from the Japanese movie The Cat Returns."></a>
+        <div class="source"><p>Morita, H. (2002). <i> The cat returns. </i> [Film]. Studio Ghibli.</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img23">
+        <p><b>Image 23</b></p>
+        <a href="https://images.squarespace-cdn.com/content/v1/513e6716e4b0970eaf20ac82/1476466321963-MKZA843WIOJS7T4UBYM0/ke17ZwdGBToddI8pDm48kGe_zHsIEBnrxKQZwuFuCLtZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpyDMbRSd9RbctmX65WROTXCAERHWUz1tHr8xhIRxX-bYgm7EZHTu1ED0roWhfx2Rfo/cat+master.jpg"><img class="catpic" src="https://images.squarespace-cdn.com/content/v1/513e6716e4b0970eaf20ac82/1476466321963-MKZA843WIOJS7T4UBYM0/ke17ZwdGBToddI8pDm48kGe_zHsIEBnrxKQZwuFuCLtZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpyDMbRSd9RbctmX65WROTXCAERHWUz1tHr8xhIRxX-bYgm7EZHTu1ED0roWhfx2Rfo/cat+master.jpg" alt="Block print showing bigcats revering a common house cat."></a>
+        <div class="source"><p>Ulanbaagen, S. (2017). <i>Cat master </i> [Block print]. SustaiArt. http://sustaiart.com/2016/10/14/7xvovyjm7c28wocg9m0gc5g3yuvma2</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img24">
+        <p><b>Image 24</b></p>
+        <a href="https://www.oldbookillustrations.com/wp-content/uploads/2016/07/into-cat.jpg"><img class="catpic" src="https://www.oldbookillustrations.com/wp-content/uploads/2016/07/into-cat.jpg" alt="Drawing of a witch-turned-cat."></a>
+        <div class="source"><p>Rackham, A. (1920) <i> By day she turned herself into a cat </i> [Ink drawing]. Old Book Illustrations. https://www.oldbookillustrations.com/illustrations/into-cat/</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img25">
+        <p><b>Image 25</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/a/ab/Tennel_Cheshire_proof.png"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Tennel_Cheshire_proof.png" alt="Hand-coloured drawing of the Cheshire cat."></a>
+        <div class="source"><p>Tenniel, J. (ca. 1889). [Hand-coloured drawing of the Cheshire cat]. Wikimedia Commons. https://upload.wikimedia.org/wikipedia/commons/a/ab/Tennel_Cheshire_proof.png</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img26">
+        <p><b>Image 26</b></p>
+        <a href="https://www.newcastleherald.com.au/images/transform/v1/crop/frm/3AijacentBN9GedHCvcASxG/c0c9f193-3471-4db7-882a-96767070d2d9.jpg/r0_0_2080_1303_w1200_h678_fmax.jpg"><img class="catpic" src="https://www.newcastleherald.com.au/images/transform/v1/crop/frm/3AijacentBN9GedHCvcASxG/c0c9f193-3471-4db7-882a-96767070d2d9.jpg/r0_0_2080_1303_w1200_h678_fmax.jpg" alt="Photograph of the stuffed 'Tantanoola Tiger'."></a>
+        <div class="source"><p>Newcastle Herald. (1909). [Photograph of the stuffed “Tantanoola Tiger”]. https://www.newcastleherald.com.au/story/4764028/the-tale-of-the-tantanoola-tiger/</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img27">
+        <p><b>Image 27</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Box_for_animal_mummy_surmounted_by_a_cat%2C_inscribed_MET_LC-12_182_27_EGDP023744.jpg/800px-Box_for_animal_mummy_surmounted_by_a_cat%2C_inscribed_MET_LC-12_182_27_EGDP023744.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Box_for_animal_mummy_surmounted_by_a_cat%2C_inscribed_MET_LC-12_182_27_EGDP023744.jpg/800px-Box_for_animal_mummy_surmounted_by_a_cat%2C_inscribed_MET_LC-12_182_27_EGDP023744.jpg" alt="Photograph of a box for animal mummy surmounted by a cat."></a>
+        <div class="source"><p>Metropolitan Museum of Art. (ca. 664-30BCE). [Box for animal mummy surmounted by a cat, inscribed]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:Box_for_animal_mummy_surmounted_by_a_cat,_inscribed_MET_LC-12_182_27_EGDP023744.jpg</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img28">
+        <p><b>Image 28</b></p>
+        <a href="https://i.postimg.cc/MH65YSt3/image.png"><img class="catpic" src="https://i.postimg.cc/MH65YSt3/image.png" alt="A bronze figurine of a lion."></a>
+        <div class="source"><p>Deco Art Africa. (ca. 19th century). <i> Tribal Asante brass lion </i> [Brass artifact]. http://decoartafrica.com/item/568-tribal-asante-brass-lion-497</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img29">
+        <p><b>Image 29</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/6/6d/ImperialMaleLionGuard.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/ImperialMaleLionGuard.jpg" alt="Chinese imperial guardian lion (male) at the Imperial Palace Museum, Bejing."></a>
+        <div class="source"><p>Leonard G. (ca. 1368-1644). [Chinese imperial guardian lion (male) at the Imperial Palace Museum, Bejing]. Wikimedia Commons. https://upload.wikimedia.org/wikipedia/commons/6/6d/ImperialMaleLionGuard.jpg</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img30">
+        <p><b>Image 30</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/9/95/Abraham_Teniers_-_Kapperszaak_met_apen_en_katten.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Abraham_Teniers_-_Kapperszaak_met_apen_en_katten.jpg" alt="Painting of Barbershop with Monkeys and Cats by Abraham Teniers."></a>
+        <div class="source"><p>Teniers, A. (ca. Mid 17th century). <i> Barbierstube mit Affen und Katzen (barbershop with monkeys and cats) </i> [Painting]. Kunsthistorisches Museum. </p></div>
+    </div>
+
+    <div class="imagecontainer" id="img31">
+        <p><b>Image 31</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/3/38/Page_158_illustration_in_More_English_Fairy_Tales.png"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Page_158_illustration_in_More_English_Fairy_Tales.png" alt="Printed illustration of a cat-sith."></a>
+        <div class="source"><p>Batten, J. (1894). [Printed illustration of a cat-sith]. Wikimedia Commons. https://upload.wikimedia.org/wikipedia/commons/3/38/Page_158_illustration_in_More_English_Fairy_Tales.png</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img32">
+        <p><b>Image 32</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/5/5e/Cactus_cat.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Cactus_cat.jpg" alt="Illustration of an American Southwest mythical cactus cat."></a>
+        <div class="source"><p>Tryon, M. (1939). [Illustration of an American Southwest mythical cactus cat]. Lumberwoods Unnatural History Museum.  http://www.lib.lumberwoods.com/fc/cactuscat.html</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img33">
+        <p><b>Image 33</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/d/d5/Ball_tailed_cat.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Ball_tailed_cat.jpg" alt="Illustration of an American mythical ball-tailed cat."></a>
+        <div class="source"><p>Tryon, M. (1939). [Illustration of an American mythical ball-tailed cactus cat]. Lumberwoods Unnatural History Museum.  http://www.lib.lumberwoods.com/fc/balltailedcat.html</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img34">
+        <p><b>Image 34</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/e/e5/Silver_cat.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Silver_cat.jpg" alt="Illustration of an American mythical silvercat."></a>
+        <div class="source"><p>Tryon, M. (1939). [Illustration of an American mythical silvercat]. Lumberwoods Unnatural History Museum.  http://www.lib.lumberwoods.org/fc/slivercat.html</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img35">
+        <p><b>Image 35</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/1/14/Dingmaul.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/1/14/Dingmaul.jpg" alt="Illustration of an American mythical dingmaul."></a>
+        <div class="source"><p>Tryon, M. (1939). [Illustration of an American mythical dingmaul]. Lumberwoods Unnatural History Museum.  http://www.lib.lumberwoods.org/fc/dingmaul.html</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img36">
+        <p><b>Image 36</b></p>
+        <a href="https://static.wikia.nocookie.net/monster/images/6/6b/IMG_9150.jpg"><img class="catpic" src="https://static.wikia.nocookie.net/monster/images/6/6b/IMG_9150.jpg" alt="Illustration of an American mythical splintercat."></a>
+        <div class="source"><p>Tryon, M. (1939). [Illustration of an American mythical splintercat]. Lumberwoods Unnatural History Museum.  http://www.lib.lumberwoods.org/fc/splintercat.html</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img37">
+        <p><b>Image 37</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/AberdeenBestiaryFolio008vLeopardDetail.jpg/740px-AberdeenBestiaryFolio008vLeopardDetail.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/AberdeenBestiaryFolio008vLeopardDetail.jpg/740px-AberdeenBestiaryFolio008vLeopardDetail.jpg" alt="Painting of a medieval Pard."></a>
+        <div class="source"><p>Unknown Artist. (ca. 12th century). <i>Leopard</i> [Painting]. University of Aberdeen.</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img38">
+        <p><b>Image 38</b></p>
+        <a href="https://s.raseef22.net/storage/attachments/1080/manuscript_961247.jpg"><img class="catpic" src="https://s.raseef22.net/storage/attachments/1080/manuscript_961247.jpg" alt="Painting of a spotted cat in a copy of the Kalila wa Dimna."></a>
+        <div class="source"><p>Unknown Artist. (ca. 14th century). [Painting of a spotted cat in a copy of the Kalila wa Dimna]. Bodlieian Library.</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img39">
+        <p><b>Image 39</b></p>
+        <a href="https://i.pinimg.com/originals/9c/90/f9/9c90f9cc058dd9fc71e5c6da72ef5818.jpg"><img class="catpic" src="https://i.pinimg.com/originals/9c/90/f9/9c90f9cc058dd9fc71e5c6da72ef5818.jpg" alt="Adrienne Segur's illustration for the story Kip the Enchanted Cat."></a>
+        <div class="source"><p>Segur, A. (ca. 1900s). <i>Kip the enchanted cat </i> [Illustration]. Art Passions. https://artpassions.net/segur/adrienne_segur.html</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img40">
+        <p><b>Image 40</b></p>
+        <a href="https://i.postimg.cc/wjwp5qVZ/image.png"><img class="catpic" src="https://i.postimg.cc/wjwp5qVZ/image.png" alt="Illustration of a cat in the book Kurnau ja Kamaluu."></a>
+        <div class="source"><p>Markkanen, O. (ca. 1978). [Illustration of a cat in the book Kurnau ja Kamaluu]. Kuriosas. http://www.kuriosas.com/vintage-finnish-book-illustration-outi-markkanen/</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img41">
+        <p><b>Image 41</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/en/b/bd/Doraemon_character.png"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/en/b/bd/Doraemon_character.png" alt="Illustration of Fujiko Fujio's titular character Doraemon."></a>
+        <div class="source"><p>Fujio, F. (1970). <i> Doraemon </i> [Illustration]. Wikimedia Commons. https://en.wikipedia.org/wiki/File:Doraemon_character.png</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img42">
+        <p><b>Image 42</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/%C3%89dition_Curmer_%281843%29_-_Le_Chat_bott%C3%A9_-_1.png/387px-%C3%89dition_Curmer_%281843%29_-_Le_Chat_bott%C3%A9_-_1.png"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/%C3%89dition_Curmer_%281843%29_-_Le_Chat_bott%C3%A9_-_1.png/387px-%C3%89dition_Curmer_%281843%29_-_Le_Chat_bott%C3%A9_-_1.png" alt="Illustration of Puss in Boots."></a>
+        <div class="source"><p>Pauquet, Marvy, Jeanron, Jacque, Beauce. (1843). <i> Puss in Boots </i>. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:%C3%89dition_Curmer_(1843)_-_Le_Chat_bott%C3%A9_-_1.png</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img43">
+        <p><b>Image 43</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/9/99/Th%C3%A9ophile-Alexandre_Steinlen_-_Tourn%C3%A9e_du_Chat_Noir_de_Rodolphe_Salis_%28Tour_of_Rodolphe_Salis%27_Chat_Noir%29_-_Google_Art_Project.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Th%C3%A9ophile-Alexandre_Steinlen_-_Tourn%C3%A9e_du_Chat_Noir_de_Rodolphe_Salis_%28Tour_of_Rodolphe_Salis%27_Chat_Noir%29_-_Google_Art_Project.jpg" alt="Illustration of Chat Noir."></a>
+        <div class="source"><p>Steinlen, T. (1896). <i> Tournée du Chat Noir de Rodolphe Salis (Tour of Rodolphe Salis' Chat Noir) </i> [Illustration]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:Th%C3%A9ophile-Alexandre_Steinlen_-_Tourn%C3%A9e_du_Chat_Noir_de_Rodolphe_Salis_(Tour_of_Rodolphe_Salis%27_Chat_Noir)_-_Google_Art_Project.jpg</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img44">
+        <p><b>Image 44</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/John_Reinhard_Weguelin_%E2%80%93_The_Obsequies_of_an_Egyptian_Cat_%281886%29.jpg/800px-John_Reinhard_Weguelin_%E2%80%93_The_Obsequies_of_an_Egyptian_Cat_%281886%29.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/John_Reinhard_Weguelin_%E2%80%93_The_Obsequies_of_an_Egyptian_Cat_%281886%29.jpg/800px-John_Reinhard_Weguelin_%E2%80%93_The_Obsequies_of_an_Egyptian_Cat_%281886%29.jpg" alt="John Weguelin's painting - The Obsequies of an Egyptian Cat."></a>
+        <div class="source"><p>Weguelin, J. (1886). <i> The obsequies of an Egyptian cat </i> [Painting]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:John_Reinhard_Weguelin_%E2%80%93_The_Obsequies_of_an_Egyptian_Cat_(1886).jpg</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img45">
+        <p><b>Image 45</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Contes_De_Fees_%281908%29_%2814772660323%29.jpg/367px-Contes_De_Fees_%281908%29_%2814772660323%29.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Contes_De_Fees_%281908%29_%2814772660323%29.jpg/367px-Contes_De_Fees_%281908%29_%2814772660323%29.jpg" alt="Illustration of The White Cat - a French fairy tale."></a>
+        <div class="source"><p>Perrault, Charles, Jeanne-Marie, M. (1908). <i> Contes De Fees </i> [Illustration]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:Contes_De_Fees_(1908)_(14772660323).jpg</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img46">
+        <p><b>Image 46</b></p>
+        <a href="https://cdnb.artstation.com/p/assets/images/images/023/938/899/large/samuel-allan-3-cat-in-woods.jpg?1580820362"><img class="catpic" src="https://cdnb.artstation.com/p/assets/images/images/023/938/899/large/samuel-allan-3-cat-in-woods.jpg" alt="Concept art by Samuel Allan for the PBS rendition of traditional Icelandic folklore - The Yule Cat."></a>
+        <div class="source"><p>Allan, S. (2019). <i> The Yule cat </i> [Concept art]. Artstation. https://samuelallan.artstation.com/projects/2xv6Og</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img47">
+        <p><b>Image 47</b></p>
+        <a href="https://collectionapi.metmuseum.org/api/collection/v1/iiif/548564/1085688/main-image"><img class="catpic" src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/548564/1085688/main-image" alt="A facsimile painting of a cat killing a serpent associated with Chapter 17 in the Book of the Dead."></a>
+        <div class="source"><p>Wilkinson, C. (1920-1921, original ca. 1295-1213). <i> Cat killing a serpent </i> [Painting]. The MET museum. https://www.metmuseum.org/art/collection/search/548564</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img48">
+        <p><b>Image 48</b></p>
+        <a href="https://collectionapi.metmuseum.org/api/collection/v1/iiif/557817/1157895/main-image"><img class="catpic" src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/557817/1157895/main-image" alt="Painting of a cat seated under a chair in the Tomb of Ipuy."></a>
+        <div class="source"><p>Davies, N. (ca. 1295-1213BCE). <i> Cat seated under a chair, Tomb of Ipuy </i> [Painting]. The MET Museum. https://www.metmuseum.org/art/collection/search/557817</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img49">
+        <p><b>Image 49</b></p>
+        <a href="https://images.metmuseum.org/CRDImages/dp/original/DP814798.jpg"><img class="catpic" src="https://images.metmuseum.org/CRDImages/dp/original/DP814798.jpg" alt="Rembrandt's etching of Mary, Jesus, Joseph and a cat."></a>
+        <div class="source"><p>Rembrandt, R. (1654). <i> Virgin and child with the cat: and Joseph at the window </i> [Etching]. The MET Museum. https://www.metmuseum.org/art/collection/search/334647</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img50">
+        <p><b>Image 50</b></p>
+        <a href="https://images.collections.yale.edu/iiif/2/ycba:6d31d571-323b-46a2-bef4-4e789bd6b342/full/full/0/default.jpg"><img class="catpic" src="https://images.collections.yale.edu/iiif/2/ycba:6d31d571-323b-46a2-bef4-4e789bd6b342/full/full/0/default.jpg" alt="Rembrandt's etching of Mary, Jesus, Joseph and a cat."></a>
+        <div class="source"><p>Rolandson, T. (ca. 1756-1827). <i> Concerto a la Catalani </i> [Watercolour]. Yale Center for British Art. https://collections.britishart.yale.edu/catalog/tms:5539</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img51">
+        <p><b>Image 51</b></p>
+        <a href="https://i.postimg.cc/X7BgPq6t/image.png"><img class="catpic" src="https://i.postimg.cc/X7BgPq6t/image.png" alt="Photo of a cat-shaped ink line created during the Qing Dynasty."></a>
+        <div class="source"><p>Unknown Artist. (ca. 1616-1912). <i> Cat shaped ink line </i> [Artifact]. Zhenjing Traditional Woodwork Museum. https://artsandculture.google.com/asset/car-shaped-ink-line/jwGn3o31Pkk2nw</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img52">
+        <p><b>Image 52</b></p>
+        <a href="https://ids.si.edu/ids/deliveryService/full/id/FS-7447_37"><img class="catpic" src="https://ids.si.edu/ids/deliveryService/full/id/FS-7447_37" alt=" Souvenirs of the Eastern capital on the fifty-three stations of the Tokaido: the actor Onoe Baiko III as the cat spirit of old temple (Painting)."></a>
+        <div class="source"><p>Kagematsu. (1841). <i> Souvenirs of the Eastern capital on the fifty-three stations of the Tokaido: the actor Onoe Baiko III as the cat spirit of old temple </i> [Painting]. National Museum of Asian Art. https://asia.si.edu/object/S2004.3.292/</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img53">
+        <p><b>Image 53</b></p>
+        <a href="https://images.metmuseum.org/CRDImages/dp/original/DP869409.jpg"><img class="catpic" src="https://images.metmuseum.org/CRDImages/dp/original/DP869409.jpg" alt="Ink illustration of a woman dancing with a cat in a suit."></a>
+        <div class="source"><p>Posada, J. (ca. 1880-1910). <i> A woman dancing with a cat in a suit </i> [Illustration]. The MET Museum. https://www.metmuseum.org/art/collection/search/735489</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img54">
+        <p><b>Image 54</b></p>
+        <a href="https://ids.si.edu/ids/deliveryService/full/id/FS-7568_13"><img class="catpic" src="https://ids.si.edu/ids/deliveryService/full/id/FS-7568_13" alt="Japanese traditional painting of actor Baiko in the role of the cat of Okazaki."></a>
+        <div class="source"><p>Kunichika, T. (1893). <i> 100 roles of Baiko/Cat of Okazaki </i> [Painting]. National Museum of Asian Art. https://asia.si.edu/object/S2003.8.2707/</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img55">
+        <p><b>Image 55</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Maneki-Neko_and_Okiagari-Koboshi_Daruma_Edo_Period.jpg/480px-Maneki-Neko_and_Okiagari-Koboshi_Daruma_Edo_Period.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Maneki-Neko_and_Okiagari-Koboshi_Daruma_Edo_Period.jpg/480px-Maneki-Neko_and_Okiagari-Koboshi_Daruma_Edo_Period.jpg" alt="Wooden carving of a maneki-neko and okiagari-koboshi daruma."></a>
+        <div class="source"><p>Unknown Artist. (ca. 18th century). <i> Maneki-neko and okiagari-koboshi daruma </i> [Carved wood]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:Maneki-Neko_and_Okiagari-Koboshi_Daruma_Edo_Period.jpg</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img56">
+        <p><b>Image 56</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/3/3d/Sarcophagus_of_Prince_Thutmose%27s_cat_by_Madam_Rafa%C3%A8le.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Sarcophagus_of_Prince_Thutmose%27s_cat_by_Madam_Rafa%C3%A8le.jpg" alt="Sarcophagus of Prince Thutmose's cat."></a>
+        <div class="source"><p>Larazoni. (2007, original ca. 1550-1292 BCE). <i>Sarcophagus of Prince Thutmose's cat </i> [Photograph]. Flickr. https://www.flickr.com/photos/laraz/2063179834/</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img57">
+        <p><b>Image 57</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/9/95/WLA_brooklynmuseum_Sarcophagus_for_Cat_Mummy_ca_305_BCE-1st_century_CE.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/9/95/WLA_brooklynmuseum_Sarcophagus_for_Cat_Mummy_ca_305_BCE-1st_century_CE.jpg" alt="Sarcophagus of Prince Thutmose's cat."></a>
+        <div class="source"><p>Brooklyn Museum. (ca. 305 BCE). <i> Sarcophagus for cat mummy </i> [Photograph]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:WLA_brooklynmuseum_Sarcophagus_for_Cat_Mummy_ca_305_BCE-1st_century_CE.jpg</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img58">
+        <p><b>Image 58</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Buson_Bakeneko.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Buson_Bakeneko.jpg" alt="Ink drawing of the Japanese cat demon - the bakeneko."></a>
+        <div class="source"><p>Buson, Y. (ca. 1754). <i> Bakeneko </i> [Painting]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:Buson_Bakeneko.jpg</p></div>
+    </div>
+   
+    <div class="imagecontainer" id="img59">
+        <p><b>Image 59</b></p>
+        <a href="https://data.ukiyo-e.org/mfa/images/sc219504.jpg"><img class="catpic" src="https://data.ukiyo-e.org/mfa/images/sc219504.jpg" alt="Ink drawing of the Japanese cat demon - the bakeneko."></a>
+        <div class="source"><p>Kuniyoshi, U. (1888). <i> Popular hotspring spa for cats </i> [Painting]. Ukiyo-e. https://ukiyo-e.org/image/mfa/sc219504</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img60">
+        <p><b>Image 60</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/2/21/SekienNekomata.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/2/21/SekienNekomata.jpg" alt="Ink drawing of the Japanese cat demon - Nekomata."></a>
+        <div class="source"><p>Sekien, T. (ca. 1712-1788). <i> Nekomata </i> [Ink Drawing]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:SekienNekomata.jpg</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img61">
+        <p><b>Image 61</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/0/00/SekienKasha.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/0/00/SekienKasha.jpg" alt="Ink drawing of the Japanese cat demon - Kasha."></a>
+        <div class="source"><p>Sekien, T. (ca. 1781). <i> Kasha from the gazu hyakki yagyo </i> [Ink Drawing]. Wikimedia Commons. https://en.wikipedia.org/wiki/Kasha_(folklore)#/media/File:SekienKasha.jpg </p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img62">
+        <p><b>Image 62</b></p>
+        <a href="https://i.postimg.cc/zfwhm7W6/image.png"><img class="catpic" src="https://i.postimg.cc/zfwhm7W6/image.png" alt="Photograph of a cat etching among Nazca Lines in Peru."></a>
+        <div class="source"><p>Islas, J. (2020, original ca. 200-100BCE). <i> Cat etched into desert among Nazca Lines in Peru </i> [Photograph]. The Guardian. https://www.theguardian.com/world/2020/oct/18/huge-cat-found-etched-desert-nazca-lines-peru</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img63">
+        <p><b>Image 63</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/b/b2/Laiming-Scheibler258ps.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Laiming-Scheibler258ps.jpg" alt="Schleibler’s book of arms, older part of the arms of the Laiming family."></a>
+        <div class="source"><p>Unknown Artist. (ca. 1450 – 1580). <i> Schleibler’s book of arms, older part of the arms of the Laiming family </i> [Ink drawing]. Wikimedia Commons. https://zgaebqbn6lmfnu5vlt3irkusyi-ac4c6men2g7xr2a-commons-wikimedia.translate.goog/wiki/File:Laiming-Scheibler258ps.jpg</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img64">
+        <p><b>Image 64</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Laiming-Scheibler415ps_%282%29.jpg/400px-Laiming-Scheibler415ps_%282%29.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Laiming-Scheibler415ps_%282%29.jpg/400px-Laiming-Scheibler415ps_%282%29.jpg" alt="Schleibler’s book of arms, new part of the arms of the Laiming family"></a>
+        <div class="source"><p>Unknown Artist. (ca. 1588 – 1693). <i> Schleibler’s book of arms, new part of the arms of the Laiming family </i> [Ink drawing]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:Laiming-Scheibler415ps_(2).jpg</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img65">
+        <p><b>Image 65</b></p>
+        <a href="https://media.nga.gov/iiif/4f8bf68a-decf-4d07-b398-c1c5a9a92f3d/full/full/0/default.jpg?attachment_filename=the_cat_sent_as_messenger_1973.15.173.jpg"><img class="catpic" src="https://media.nga.gov/iiif/4f8bf68a-decf-4d07-b398-c1c5a9a92f3d/full/full/0/default.jpg?attachment_filename=the_cat_sent_as_messenger_1973.15.173.jpg" alt="Etching of a cat sent as messenger to a pack of wolves."></a>
+        <div class="source"><p>Everdingen, A. (ca. 1645-1656). <i> The cat sent as a messenger </i> [Etching]. National Gallery of Art. https://www.nga.gov/collection/art-object-page.53769.html</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img66">
+        <p><b>Image 66</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/0/06/TombofNebamun-2.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/0/06/TombofNebamun-2.jpg" alt="The famous false fresco 'Pond in a Garden' from the Tomb of Nebamun."></a>
+        <div class="source"><p>Unknown Artist. (ca. 1350BCE). <i> The famous false fresco 'Pond in a Garden' from the Tomb of Nebamun </i> [Painting]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:TombofNebamun-2.jpg</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img67">
+        <p><b>Image 67</b></p>
+        <a href="https://i.postimg.cc/bJ8Gt0hQ/image.png"><img class="catpic" src="https://i.postimg.cc/bJ8Gt0hQ/image.png" alt="Part of the drawing of five cats."></a>
+        <div class="source"><p>Zhu, Z. (ca. 1368 – 1644). <i> Part of the drawing of five cats </i> [Painting]. Sina. https://k.sina.com.cn/article_1885033675_p705b54cb02700fh62.html</p></div>
+    </div>
+
+    <div class="imagecontainer" id="img68">
+        <p><b>Image 68</b></p>
+        <a href="https://culture.teldap.tw/culture/images/collection/cat/cat3.jpg"><img class="catpic" src="https://culture.teldap.tw/culture/images/collection/cat/cat3.jpg" alt=" Li Di’s drawing of a cat."></a>
+        <div class="source"><p>Li, D. (ca. 960 – 1279). <i> Li Di’s drawing of a cat </i> [Poem and painting]. Digital Taiwan, Culture & Nature. https://culture.teldap.tw/culture/index.php?option=com_content&view=article&catid=154:arts-and-illustrations&id=222:the-cats-meow-in-paintings-at-the-national-palace-museum#</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img69">
+        <p><b>Image 69</b></p>
+        <a href="https://culture.teldap.tw/culture/images/collection/cat/cat9.jpg"><img class="catpic" src="https://culture.teldap.tw/culture/images/collection/cat/cat9.jpg" alt=" Li Di’s drawing of a cat."></a>
+        <div class="source"><p>Chu, C. (ca. 1399-1435). <i> Kittens playing beneath flowers </i> [Calligraphy and painting]. Digital Taiwan, Culture & Nature. https://culture.teldap.tw/culture/index.php?option=com_content&view=article&catid=154:arts-and-illustrations&id=222:the-cats-meow-in-paintings-at-the-national-palace-museum#</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img70">
+        <p><b>Image 70</b></p>
+        <a href="https://images.metmuseum.org/CRDImages/as/original/DT8382.jpg"><img class="catpic" src="https://images.metmuseum.org/CRDImages/as/original/DT8382.jpg" alt=" Qing Xu valley - portrait of butterflies and cat."></a>
+        <div class="source"><p>Xu, G. (ca. 1823–1896). <i> 清 虛谷 蝶貓圖 軸 (Qing Xu valley - portrait of butterflies and cat) </i> [Painting]. The MET Museum. https://www.metmuseum.org/art/collection/search/49467</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img71">
+        <p><b>Image 71</b></p>
+        <a href="https://i.postimg.cc/2yj9Q5R6/image.png"><img class="catpic" src="https://i.postimg.cc/2yj9Q5R6/image.png" alt="Painting of a cat in royal clothing by Tokuhiro."></a>
+        <div class="source"><p>Tokuhiro, K. (2006). <i> 飼い猫の幻視 (A pet cat’s fantasy) </i> [Painting]. Instagram. https://www.instagram.com/p/B1qQpNhFOGK/</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img72">
+        <p><b>Image 72</b></p>
+        <a href="https://i.postimg.cc/T2SnqwX4/image.png"><img class="catpic" src="https://i.postimg.cc/T2SnqwX4/image.png" alt=" Painting cherubs serving a cat milk on a dish."></a>
+        <div class="source"><p>Tokuhiro, K. (2010). <i> 相利共生〜猫のなりわい〜(Mutualism – livelihood of cat) </i> [Painting]. Instagram. https://www.instagram.com/p/B-bfirlHmxb/</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img73">
+        <p><b>Image 73</b></p>
+        <a href="https://images.metmuseum.org/CRDImages/gr/original/DP121831.jpg"><img class="catpic" src="https://images.metmuseum.org/CRDImages/gr/original/DP121831.jpg" alt="Faience amulet in the form of a cat."></a>
+        <div class="source"><p>Unknown Artist. (ca. 664-30BCE). <i> Faience amulet in the form of a cat </i> [Glazed clay]. The MET Museum. https://www.metmuseum.org/art/collection/search/243770</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img74">
+        <p><b>Image 74</b></p>
+        <a href="https://images.metmuseum.org/CRDImages/es/original/DT7187.jpg"><img class="catpic" src="https://images.metmuseum.org/CRDImages/es/original/DT7187.jpg" alt="Pendant in the form of a seated cat."></a>
+        <div class="source"><p>Unknown Artist. (ca. 1500-1600). <i> Pendant in the form of a seated cat </i> [Artifact]. The MET Museum. https://www.metmuseum.org/art/collection/search/207267</p></div>
+    </div>
+    
+    <div class="imagecontainer" id="img75">
+        <p><b>Image 75</b></p>
+        <a href="https://images.metmuseum.org/CRDImages/dp/original/DP800648.jpg"><img class="catpic" src="https://images.metmuseum.org/CRDImages/dp/original/DP800648.jpg" alt="Candelabra grotesque with a cat."></a>
+        <div class="source"><p>Melgar, A. (ca. 1545 – 1560). <i> Candelabra grotesque with a cat </i> [Ink drawing]. The MET Museum. https://www.metmuseum.org/art/collection/search/337567</p></div>
+    </div>
+        
+    <div class="imagecontainer" id="img76">
+        <p><b>Image 76</b></p>
+        <a href="https://images.metmuseum.org/CRDImages/eg/original/M_1952.jpg"><img class="catpic" src="https://images.metmuseum.org/CRDImages/eg/original/M_1952.jpg" alt="Uraeus amulet."></a>
+        <div class="source"><p>Unknown Artist. (ca. 664 – 332 BCE). <i> Uraeus amulet </i> [Artifact]. The MET Museum. https://www.metmuseum.org/art/collection/search/560759</p></div>
+    </div>
+        
+    <div class="imagecontainer" id="img77">
+        <p><b>Image 77</b></p>
+        <a href="https://images.metmuseum.org/CRDImages/as/original/SC13262.jpg"><img class="catpic" src="https://images.metmuseum.org/CRDImages/as/original/SC13262.jpg" alt="Ancient Chinese rank badge with a tiger cat embroidered with silk and gold."></a>
+        <div class="source"><p>Unknown Artist. (ca. 1800s). <i> Rank badge with tiger cat </i> [Silk and gold]. The MET Museum. https://www.metmuseum.org/art/collection/search/69780 </p></div>
+    </div>
+        
+    <div class="imagecontainer" id="img78">
+        <p><b>Image 78</b></p>
+        <a href="https://i.postimg.cc/HWhPcXsc/image.png"><img class="catpic" src="https://i.postimg.cc/HWhPcXsc/image.png" alt="Watercolour portrait of the cat Unsinkable Sam by Georgina Shaw-Baker."></a>
+        <div class="source"><p>Shaw-Baker, G. (ca. 1955). <i> Unsinkable Sam </i> [Painting]. WWII In Colour. http://www.ww2incolor.com/art/SamGeorfinaShawBakerGreenwich.html</p></div>
+    </div>
+        
+    <div class="imagecontainer" id="img79">
+        <p><b>Image 79</b></p>
+        <a href="https://images.metmuseum.org/CRDImages/eg/original/26.7.773%20(1).jpg"><img class="catpic" src="https://images.metmuseum.org/CRDImages/eg/original/26.7.773%20(1).jpg" alt="Ring with a feline's head."></a>
+        <div class="source"><p>Unknown Artist. (ca. 1550 – 1425). <i> Ring with a feline’s head </i> [Artifact]. The MET Museum. https://www.metmuseum.org/art/collection/search/547604 </p></div>
+    </div>
+        
+    <div class="imagecontainer" id="img80">
+        <p><b>Image 80</b></p>
+        <a href="https://images.metmuseum.org/CRDImages/as/original/DP146821.jpg"><img class="catpic" src="https://images.metmuseum.org/CRDImages/as/original/DP146821.jpg" alt="Utagawa Yuniyoshi's painting of a scene from a ghost story: the Okazaki cat demon."></a>
+        <div class="source"><p>Kuniyoshi, U. (ca. 1850). <i> Scene from a ghost story: the Okazaki cat demon </i> [Painting]. The MET Museum. https://www.metmuseum.org/art/collection/search/45282</p></div>
+    </div>
+        
+    <div class="imagecontainer" id="img81">
+        <p><b>Image 81</b></p>
+        <a href="https://images.metmuseum.org/CRDImages/gr/original/DP231279.jpg"><img class="catpic" src="https://images.metmuseum.org/CRDImages/gr/original/DP231279.jpg" alt="Faience amulet in the form of a lion-headed deity."></a>
+        <div class="source"><p>Unknown Artist. (ca. 664-30BCE). <i> Faience amulet in the form of a lion-headed deity </i> [Artifact]. The MET Museum. https://www.metmuseum.org/art/collection/search/243761</p></div>
+    </div>
+        
+    <div class="imagecontainer" id="img82">
+        <p><b>Image 82</b></p>
+        <a href="https://images.metmuseum.org/CRDImages/eg/original/DP310891.jpg"><img class="catpic" src="https://images.metmuseum.org/CRDImages/eg/original/DP310891.jpg" alt="Bronze figure of the Egyptian cat goddess Bastet."></a>
+        <div class="source"><p>Unknown Artist (ca. 664-30BCE). <i> Bastet </i> [Artifact]. The MET Museum. https://www.metmuseum.org/art/collection/search/551774</p></div>
+    </div>
+        
+    <div class="imagecontainer" id="img83">
+        <p><b>Image 83</b></p>
+        <a href="https://images.metmuseum.org/CRDImages/eg/original/LC-58_67_EGDP023622.jpg"><img class="catpic" src="https://images.metmuseum.org/CRDImages/eg/original/LC-58_67_EGDP023622.jpg" alt="Curpreous metal figure of the Egyptian cat goddess Bastet."></a>
+        <div class="source"><p>Unknown Artist. (ca. 664-30BCE). <i> Bastet statuette </i> [Artifact]. The MET Museum. https://www.metmuseum.org/art/collection/search/558306</p></div>
+    </div>
+        
+    <div class="imagecontainer" id="img84">
+        <p><b>Image 84</b></p>
+        <a href="https://i.postimg.cc/Wb3SF9QV/image.png"><img class="catpic" src="https://i.postimg.cc/Wb3SF9QV/image.png" alt="John B.L. Shaw's illustration of the black cat, for Edgar Allan Poe’s “selected tales of mystery."></a>
+        <div class="source"><p>Shaw, J. (1909). <i> The black cat, for Edgar Allan Poe’s “selected tales of mystery” </i> [Drawing]. The MET Museum. https://www.metmuseum.org/art/collection/search/818473</p></div>
+    </div>
+            
+    <div class="imagecontainer" id="img85">
+        <p><b>Image 85</b></p>
+        <a href="https://images.metmuseum.org/CRDImages/eg/original/45.4.5_001.jpg"><img class="catpic" src="https://images.metmuseum.org/CRDImages/eg/original/45.4.5_001.jpg" alt="Cupreous metal figure of Bastet holding a sistrum."></a>
+        <div class="source"><p>Unknown Artist. (ca. 664 – 30BCE). <i> Bastet holding a sistrum </i> [Artifact]. The MET Museum. https://www.metmuseum.org/art/collection/search/545970</p></div>
+    </div>
+            
+    <div class="imagecontainer" id="img86">
+        <p><b>Image 86</b></p>
+        <a href="https://images.metmuseum.org/CRDImages/dp/original/DP-21168-001.jpg"><img class="catpic" src="https://images.metmuseum.org/CRDImages/dp/original/DP-21168-001.jpg" alt="Aubrey Beardsley's ilustration of the black cat, for Edgar Allan Poe’s “tales of mystery and the imagination”."></a>
+        <div class="source"><p>Beardsley, A. (1894). <i> The black cat, for Edgar Allan Poe’s “tales of mystery and the imagination” </i> [Illustration]. The MET Museum. https://www.metmuseum.org/art/collection/search/753519</p></div>
+    </div>
+                
+    <div class="imagecontainer" id="img87">
+        <p><b>Image 87</b></p>
+        <a href="https://i.postimg.cc/BvdDxSk0/image.png"><img class="catpic" src="https://i.postimg.cc/BvdDxSk0/image.png" alt="Peruvian headdress that represents a feline face with bird beak and stepped designs with volutes."></a>
+        <div class="source"><p>Unknown Artist. (ca. 1300 - 1532). <i> Headdress that represents a feline face with bird beak and stepped designs with volutes </i> [Artifact]. Google Arts and Culture. https://artsandculture.google.com/asset/headdress-that-represents-a-feline-face-with-bird-beak-and-stepped-designs-with-volutes-ml100006-chimu-style/-gFmknOliHrsIQ</p></div>
+    </div>
+                
+    <div class="imagecontainer" id="img88">
+        <p><b>Image 88</b></p>
+        <a href="https://images.metmuseum.org/CRDImages/an/original/DT5088.jpg"><img class="catpic" src="https://images.metmuseum.org/CRDImages/an/original/DT5088.jpg" alt="Belt buckle with paired felines attacking ibexes."></a>
+        <div class="source"><p>Unknown Artist. (ca. 200 – 100BCE). <i> Belt buckle with paired felines attacking ibexes </i> [Artifact]. The MET Museum. https://www.metmuseum.org/art/collection/search/322484</p></div>
+    </div>
+                
+    <div class="imagecontainer" id="img89">
+        <p><b>Image 89</b></p>
+        <a href="https://i.postimg.cc/vBrzTxBj/image.png"><img class="catpic" src="https://i.postimg.cc/vBrzTxBj/image.png" alt="Indian painting of the great goddess Durga slaying the buffalo demon (Mahishasuramardini) ."></a>
+        <div class="source"><p>Unknown Artist. (ca. 1750). <i> The great goddess Durga slaying the buffalo demon (Mahishasuramardini) </i> [Painting]. Philadelphia Museum of Art. https://www.philamuseum.org/collection/object/88261</p></div>
+    </div>
+              
+    <div class="imagecontainer" id="img90">
+        <p><b>Image 90</b></p>
+        <a href="https://i.postimg.cc/g0YcQfhZ/image.png"><img class="catpic" src="https://i.postimg.cc/g0YcQfhZ/image.png" alt="Nazcan sculptural drum with representation of a human ancestor."></a>
+        <div class="source"><p>Unknown Artist. (ca. 100 – 300). <i> Sculptural drum with representation of a human ancestor </i> [Artifact]. Google Arts and Culture. https://artsandculture.google.com/asset/sculptural-drum-with-representation-of-a-human-ancestor/HwGkHGlVSB5aHQ</p></div>
+    </div>
+              
+    <div class="imagecontainer" id="img91">
+        <p><b>Image 91</b></p>
+        <a href="https://i.postimg.cc/fbjqM4Q7/image.png"><img class="catpic" src="https://i.postimg.cc/fbjqM4Q7/image.png" alt="Gold ring with feline head in relief."></a>
+        <div class="source"><p>Unknown Artist. (ca. 1200 – 1521). <i> Gold ring with feline head in relief </i> [Artifact]. Google Arts and Culture. https://artsandculture.google.com/asset/gold-ring-with-feline-head-in-relief/OwE4ZNM5ePc7HQ</p></div>
+    </div>
+              
+    <div class="imagecontainer" id="img92">
+        <p><b>Image 92</b></p>
+        <a href="https://i.postimg.cc/Hkj7pbG6/image.png"><img class="catpic" src="https://i.postimg.cc/Hkj7pbG6/image.png" alt="Wood and gourd ceremonial goblet with a fire-engraved mythological scene."></a>
+        <div class="source"><p>Unknown Artist. (ca. 1300 – 1532). <i> Wood and gourd ceremonial goblet with a fire-engraved mythological scene </i> [Artifact]. Google Arts and Culture. https://artsandculture.google.com/asset/wood-and-gourd-ceremonial-goblet-with-a-fire-engraved-mythological-scene-ml400029/aQGwPZfJJSf3Ww</p></div>
+    </div>
+                  
+    <div class="imagecontainer" id="img93">
+        <p><b>Image 93</b></p>
+        <a href="https://i.postimg.cc/13xZtZ2b/image.png"><img class="catpic" src="https://i.postimg.cc/13xZtZ2b/image.png" alt="Mantle fragment with embroidered Paracas feline God."></a>
+        <div class="source"><p>Unknown Artist. (ca. 800BCE – 200AD). <i> Mantle fragment with embroidered Paracas feline God</i> [Artifact]. Google Arts and Culture. https://artsandculture.google.com/asset/mantle-fragment-with-embroidered-paracas-feline-god/qAFQXcuCUdWduA</p></div>
+    </div>
+                      
+    <div class="imagecontainer" id="img94">
+        <p><b>Image 94</b></p>
+        <a href="https://images.metmuseum.org/CRDImages/an/original/DP110696.jpg"><img class="catpic" src="https://images.metmuseum.org/CRDImages/an/original/DP110696.jpg" alt="Openwork furniture plaque with the head of a feline."></a>
+        <div class="source"><p>Unknown Artist. (ca. 9 – 8BCE). <i> Openwork furniture plaque with the head of a feline </i> [Artifact]. The MET Museum. https://www.metmuseum.org/art/collection/search/325571</p></div>
+    </div>
+                         
+    <div class="imagecontainer" id="img95">
+        <p><b>Image 95</b></p>
+        <a href="https://i.postimg.cc/J4SBzG1m/image.png"><img class="catpic" src="https://i.postimg.cc/J4SBzG1m/image.png" alt="Cat mummies."></a>
+        <div class="source"><p>Unknown Artist. (ca. 332BCE – 337AD). <i>Cat mummies</i> [Artifact]. Google Arts and Culture. https://artsandculture.google.com/asset/cat-mummies/JgFL5Hr7wX4JmA </p></div>
+    </div>
+                             
+    <div class="imagecontainer" id="img96">
+        <p><b>Image 96</b></p>
+        <a href="https://images.metmuseum.org/CRDImages/ao/original/VS69_7_1.jpg"><img class="catpic" src="https://images.metmuseum.org/CRDImages/ao/original/VS69_7_1.jpg" alt="Feline-head pendant."></a>
+        <div class="source"><p>Unknown Artist. (8 – 12). <i> Feline-head pendant </i> [Artifact]. The MET Museum. http://www.metmuseum.org/art/collection/search/309531</p></div>
+    </div>
+                             
+    <div class="imagecontainer" id="img97">
+        <p><b>Image 97</b></p>
+        <a href="https://i.postimg.cc/NMrjVxHH/image.png"><img class="catpic" src="https://i.postimg.cc/NMrjVxHH/image.png" alt="Whistling ceramic vessel that represents a lord carrying a feline."></a>
+        <div class="source"><p>Unknown Artist. (ca. 1300E – 1532). <i> Whistling ceramic vessel that represents a lord carrying a feline</i> [Artifact]. Google Arts and Culture. https://artsandculture.google.com/asset/whistling-ceramic-vessel-that-represents-a-lord-carrying-a-feline-ml027726/JgFSOfj9J4mmTg</p></div>
+    </div>
+                             
+    <div class="imagecontainer" id="img98">
+        <p><b>Image 98</b></p>
+        <a href="https://i.postimg.cc/KvpCkhVm/image.png"><img class="catpic" src="https://i.postimg.cc/KvpCkhVm/image.png" alt="Crystal bowl with imprints of lions attacking bulls."></a>
+        <div class="source"><p>Unknown Artist. (ca. 600 – 500BCE). <i> Crystal bowl with imprints of lions attacking bulls </i> [Artifact]. Google Arts and Culture. https://artsandculture.google.com/asset/bowl/7gGNaNzDfsR-8w</p></div>
+    </div>
+                             
+    <div class="imagecontainer" id="img99">
+        <p><b>Image 99</b></p>
+        <a href="https://i.postimg.cc/sgNG1m5M/image.png"><img class="catpic" src="https://i.postimg.cc/sgNG1m5M/image.png" alt="Painting of the Polish story surrounding the pussy willow flower."></a>
+        <div class="source"><p>Unknown Artist. (ca. 2013). <i> Pussy willow </i> [Painting]. LiveJournal. https://calico-pye.livejournal.com/1991673.html</p></div>
+    </div>
+                            
+    <div class="imagecontainer" id="img100">
+        <p><b>Image 100</b></p>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/2/2f/Cats_suggested_as_the_fifty-three_stations_of_the_Tokaido.jpg"><img class="catpic" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Cats_suggested_as_the_fifty-three_stations_of_the_Tokaido.jpg" alt="> Cats Suggested as The Fifty-three Stations of the Tōkaidō."></a>
+        <div class="source"><p>Kuniyoshi, U. (1850). <i> Cats Suggested as The Fifty-three Stations of the Tōkaidō </i> [Wood print]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:Cats_suggested_as_the_fifty-three_stations_of_the_Tokaido.jpg</p></div>
+    </div>
+
+    <script src="/js/catmap.js"></script>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYKyo4QBn9hkVJ8WWTU085OrGBs1GZ_lY&callback=initMap&libraries=&v=weekly"S
+    async
+  ></script>
+
+</body>
+
+</html>

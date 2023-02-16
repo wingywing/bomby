@@ -1,3 +1,5 @@
+console.log("lol u snoopin? o:");
+
 // Toggles whether the buttons are visible or not under the header
 let collapse = document.getElementById("togglestamps-button");
 collapse.addEventListener("click", collapseButtons);
@@ -58,15 +60,4 @@ if(themeSwitch) {
       localStorage.removeItem('themeSwitch'); // reset theme selection 
     } 
   };
-}
-else if (localStorage.getItem('themeSwitch') == null) {
-// Check to see if Media-Queries are supported
-(window.matchMedia) {
-  // Check if the dark-mode Media-Query matches
-  if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-    document.body.setAttribute('data-theme', 'dark');
-  } else {
-    document.body.removeAttribute('data-theme');
-  }
-}
 }
