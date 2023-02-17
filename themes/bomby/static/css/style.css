@@ -454,6 +454,7 @@ footer {
     object-fit: contain;
     text-align: left;
     font-size: 16px;
+    height: auto;
 }
 #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
     background: var(--orange);
