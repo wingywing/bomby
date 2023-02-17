@@ -28,8 +28,6 @@ jobs:
 
       # When the dist_dir is ready, deploy it to neocities
 
-      - run: make
-
       - if: ${{ success() && github.ref == 'refs/heads/main' }}
         id: deploy
         continue-on-error: true
