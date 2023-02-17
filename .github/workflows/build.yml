@@ -36,7 +36,7 @@ jobs:
         continue-on-error: true
         uses: bcomnes/deploy-to-neocities@v1
         with:
-          apiKey: ${{ secrets.NEOCITIES_API_KEY }}
+          api_token: ${{ secrets.NEOCITIES_API_KEY }}
           dist_dir: public
           cleanup: true
 
