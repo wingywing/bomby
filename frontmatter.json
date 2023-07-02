@@ -51,10 +51,7 @@
         {
           "title": "archives",
           "name": "archives",
-          "type": "choice",
-          "choices": [
-            "2023/February"
-          ]
+          "type": "string"
         }
       ]
     }
@@ -104,5 +101,6 @@
       "body": "<!--more-->",
       "fields": []
     }
-  }
+  },
+  "frontMatter.dashboard.openOnStart": true
 }

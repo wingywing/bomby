@@ -6,7 +6,19 @@
     <description>Recent content in dev on Bomby&#39;s Website!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Jun 2021 19:10:13 +1500</lastBuildDate><atom:link href="http://bomby.neocities.org/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Jun 2023 16:41:00 +0000</lastBuildDate><atom:link href="http://bomby.neocities.org/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Front Matter</title>
+      <link>http://bomby.neocities.org/blog/front-matter/</link>
+      <pubDate>Thu, 29 Jun 2023 16:41:00 +0000</pubDate>
+      
+      <guid>http://bomby.neocities.org/blog/front-matter/</guid>
+      <description>&lt;p&gt;Hey guys,&lt;/p&gt;
+&lt;p&gt;Quick update today since I got carried away by this website again (it always happen out of nowhere I swear!), but it&amp;rsquo;s already 1:22am where I am! (Ohno&amp;hellip; and I&amp;rsquo;ve got work tomorrow morning)&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m trying out something new (again)&lt;/p&gt;
+&lt;p&gt;This something new is Front Matter – a CMS extension for VS Code that lets me write my markdown for my blogposts using WYSIWYG (What You See is What You Get).&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Winter break</title>
       <link>http://bomby.neocities.org/blog/2021-06-03/</link>

@@ -3,21 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://bomby.neocities.org/tags/blog/</loc>
-    <lastmod>2023-02-17T00:55:23+15:00</lastmod>
+    <lastmod>2023-06-29T16:41:00+00:00</lastmod>
   </url><url>
     <loc>http://bomby.neocities.org/categories/blog/</loc>
-    <lastmod>2023-02-17T00:55:23+15:00</lastmod>
+    <lastmod>2023-06-29T16:41:00+00:00</lastmod>
   </url><url>
     <loc>http://bomby.neocities.org/blog/</loc>
-    <lastmod>2023-02-17T00:55:23+15:00</lastmod>
+    <lastmod>2023-06-29T16:41:00+00:00</lastmod>
   </url><url>
     <loc>http://bomby.neocities.org/</loc>
-    <lastmod>2023-02-17T00:55:23+15:00</lastmod>
+    <lastmod>2023-06-29T16:41:00+00:00</lastmod>
+  </url><url>
+    <loc>http://bomby.neocities.org/tags/braindump/</loc>
+    <lastmod>2023-06-29T16:41:00+00:00</lastmod>
   </url><url>
     <loc>http://bomby.neocities.org/categories/</loc>
-    <lastmod>2023-02-17T00:55:23+15:00</lastmod>
+    <lastmod>2023-06-29T16:41:00+00:00</lastmod>
   </url><url>
-    <loc>http://bomby.neocities.org/blog/2023-02-17/</loc>
+    <loc>http://bomby.neocities.org/tags/dev/</loc>
+    <lastmod>2023-06-29T16:41:00+00:00</lastmod>
+  </url><url>
+    <loc>http://bomby.neocities.org/blog/front-matter/</loc>
+    <lastmod>2023-06-29T16:41:00+00:00</lastmod>
+  </url><url>
+    <loc>http://bomby.neocities.org/tags/</loc>
+    <lastmod>2023-06-29T16:41:00+00:00</lastmod>
+  </url><url>
+    <loc>http://bomby.neocities.org/blog/hot-minute-2-years/</loc>
     <lastmod>2023-02-17T00:55:23+15:00</lastmod>
   </url><url>
     <loc>http://bomby.neocities.org/tags/life/</loc>
@@ -26,14 +38,8 @@
     <loc>http://bomby.neocities.org/tags/love/</loc>
     <lastmod>2023-02-17T00:55:23+15:00</lastmod>
   </url><url>
-    <loc>http://bomby.neocities.org/tags/</loc>
-    <lastmod>2023-02-17T00:55:23+15:00</lastmod>
-  </url><url>
     <loc>http://bomby.neocities.org/blog/2021-06-23/</loc>
     <lastmod>2021-06-23T22:21:38+15:00</lastmod>
-  </url><url>
-    <loc>http://bomby.neocities.org/tags/dev/</loc>
-    <lastmod>2021-06-03T19:10:13+15:00</lastmod>
   </url><url>
     <loc>http://bomby.neocities.org/tags/drama/</loc>
     <lastmod>2021-06-03T19:10:13+15:00</lastmod>
@@ -49,9 +55,6 @@
   </url><url>
     <loc>http://bomby.neocities.org/blog/2021-05-07/</loc>
     <lastmod>2021-05-07T18:30:13+15:00</lastmod>
-  </url><url>
-    <loc>http://bomby.neocities.org/tags/braindump/</loc>
-    <lastmod>2021-05-03T17:39:13+15:00</lastmod>
   </url><url>
     <loc>http://bomby.neocities.org/blog/2021-05-03/</loc>
     <lastmod>2021-05-03T17:39:13+15:00</lastmod>
@@ -96,6 +99,8 @@
     <loc>http://bomby.neocities.org/archives/2021/may/</loc>
   </url><url>
     <loc>http://bomby.neocities.org/archives/2023/february/</loc>
+  </url><url>
+    <loc>http://bomby.neocities.org/archives/2023/june/</loc>
   </url><url>
     <loc>http://bomby.neocities.org/about/</loc>
   </url><url>
