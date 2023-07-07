@@ -14,6 +14,7 @@ categories:
 publishdate: 2023-07-02T13:52:06.031Z
 archives: 2023/Jul
 slug: update
+archives_weight: 6
 ---
 
 So the last post was super short since I wrote it at midnight, but finally have a slither of time to do a more detailed update...

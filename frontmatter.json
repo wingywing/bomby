@@ -100,6 +100,11 @@
       "description": "",
       "body": "<!--more-->",
       "fields": []
+    },
+    "Left": {
+      "description": "Align left",
+      "body": "{{< left >}}",
+      "fields": []
     }
   },
   "frontMatter.dashboard.openOnStart": true
