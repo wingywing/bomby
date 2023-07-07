@@ -12,7 +12,7 @@ tags:
 categories:
   - blog
 publishdate: 2023-07-02T13:52:06.031Z
-archives: 2023/Jul
+archives: 2023/07
 slug: update
 archives_weight: 6
 ---

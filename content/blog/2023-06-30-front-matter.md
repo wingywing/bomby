@@ -11,7 +11,7 @@ tags:
 categories:
   - blog
 publishdate: 2023-06-29T16:41:53.650Z
-archives: 2023/June
+archives: 2023/07
 slug: front-matter
 archives_weight: 5
 ---
@@ -39,3 +39,4 @@ To-do: <br>
 2. Make post templates for Reviews (i.e. for games or shows etc.) <br>
 3. Add custom emotes. <br>
 4. Add a mood tracker on the top corner of each blog post.
+{{< /left >}}

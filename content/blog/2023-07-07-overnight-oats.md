@@ -16,10 +16,9 @@ categories:
   - blog
   - recipe
 publishdate: 2023-07-07T10:36:02.606Z
-archives: 2023/jul
+archives: 2023/07
 slug: overnight-oats
 archives_weight: 6
-
 ---
 
 {{< img src="/img/overnight_oats.jpg" alt="Overnight oats with natural peanut butter drizzle and sugarfree chocolate nuts" >}}
