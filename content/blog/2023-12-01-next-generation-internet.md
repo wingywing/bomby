@@ -96,4 +96,7 @@ I'm really enjoying this journey right now. Working on another personal blog pro
 {{< br >}}
 </div>
 
+
 Please let me know if you're a blog writer! I would love to read more. Catch you later (maybe in another 6 months when I find something cool)
+
+{{</ left >}}
