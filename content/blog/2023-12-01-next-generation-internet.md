@@ -80,7 +80,7 @@ I started my journey at <a href='https://blogroll.org'>blogroll.org</a> and foun
 {{< left >}}
 
 In my rabbithole of a journey, I learnt about <a href="https://freewebsearch.org">#FreeWebSearch</a>, which led me to <a href="https://www.ngi.eu/">Next Generation Internet</a> and the <a href='https://nlnet.nl/'>NLnet Foundation</a> -- open internet initiatives funded by the European Union! I have to say, the EU kinda makes me want to move to Europe with the great strides they're taking towards consumer rights in technology.
-{{< left >}}
+
 I know it's a niche right now, but the fact that a whole government entity with leading researchers and policymakers are involved in reviving the old web is quite incredible.
 {{< br >}}
 {{< br >}}
