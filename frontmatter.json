@@ -52,6 +52,17 @@
           "title": "archives",
           "name": "archives",
           "type": "string"
+        },
+        {
+          "title": "archives_weight",
+          "name": "archives_weight",
+          "type": "number"
+        },
+        {
+          "title": "keywords",
+          "name": "keywords",
+          "type": "fields",
+          "fields": []
         }
       ]
     }
@@ -64,20 +75,6 @@
       "title": "blog",
       "path": "[[workspace]]/content/blog"
     }
-  ],
-  "frontMatter.taxonomy.tags": [
-    "blog",
-    "braindump",
-    "dev",
-    "drama",
-    "funny",
-    "hugo",
-    "life",
-    "love",
-    "uni"
-  ],
-  "frontMatter.taxonomy.categories": [
-    "blog"
   ],
   "frontMatter.content.snippets": {
     "Images": {
