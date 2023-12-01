@@ -45,12 +45,9 @@ As they say, social media only show the fun, and the best parts of people.
 {{< br >}}
 {{< br >}}
 Just yesterday, I found a video talking about the Open Source read-it-later app called <a href='Omnivore'>Omnivore</a>. The video is this one here by <a href='https://www.youtube.com/@ABetterComputer'>A Better Computer</a>:
-
-<!-- FM:Snippet:Start data:{"id":"View more","fields":[]} -->
-<!--more-->
-<!-- FM:Snippet:End -->
-
+{{< br >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JyfBZwIuOsY?si=5pL8j9pPAIH_CJfL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style='margin: 1rem 0'></iframe>
+{{< br >}}
 
 Before this, I've never used an RSS reader or read blogged email newsletters. At first, I was just intrigued by how the app is completely free to use, and was looking for an app that can keep static webpages for future reading.
 {{< br >}}
@@ -74,11 +71,12 @@ I started my journey at <a href='https://blogroll.org'>blogroll.org</a> and foun
 {{< br >}}
 {{< br >}}
 
-{{< /left >}}
 <h2> Next Generation Internet</h2>
-<a href='https://www.ngi.eu/'>{{< img src="/img/NGI%20Whats%20in%20it%20for%20you.png" alt="Next Generation Internet banner illustration">}}  </a>
-{{< left >}}
+<a href='https://www.ngi.eu/'>{{< img src="/img/NGI%20Whats%20in%20it%20for%20you.png" alt="Next Generation Internet banner illustration" >}}  </a>
 
+{{< br >}}
+{{< br >}}
+<div style ='text-align:left'>
 In my rabbithole of a journey, I learnt about <a href="https://freewebsearch.org">#FreeWebSearch</a>, which led me to <a href="https://www.ngi.eu/">Next Generation Internet</a> and the <a href='https://nlnet.nl/'>NLnet Foundation</a> -- open internet initiatives funded by the European Union! I have to say, the EU kinda makes me want to move to Europe with the great strides they're taking towards consumer rights in technology.
 
 I know it's a niche right now, but the fact that a whole government entity with leading researchers and policymakers are involved in reviving the old web is quite incredible.
@@ -96,7 +94,6 @@ It is the <a href='https://search.marginalia.nu/'> Marginalia Search Engine </a>
 I'm really enjoying this journey right now. Working on another personal blog project with my partner at the moment (my partner is an actual dev unlike me, so I'm sure the site would turn out quite incredible!), but for now, I'll use this space to be a big nerd.
 {{< br >}}
 {{< br >}}
-{{< /left >}}
-
+</div>
 
 Please let me know if you're a blog writer! I would love to read more. Catch you later (maybe in another 6 months when I find something cool)
