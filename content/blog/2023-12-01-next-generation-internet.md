@@ -74,6 +74,7 @@ I started my journey at <a href='https://blogroll.org'>blogroll.org</a> and foun
 {{< br >}}
 {{< br >}}
 
+{{< /left >}}
 <h2> Next Generation Internet</h2>
 <a href='https://www.ngi.eu/'>{{< img src="/img/NGI%20Whats%20in%20it%20for%20you.png" alt="Next Generation Internet banner illustration">}}  </a>
 {{< left >}}
@@ -95,7 +96,7 @@ It is the <a href='https://search.marginalia.nu/'> Marginalia Search Engine </a>
 I'm really enjoying this journey right now. Working on another personal blog project with my partner at the moment (my partner is an actual dev unlike me, so I'm sure the site would turn out quite incredible!), but for now, I'll use this space to be a big nerd.
 {{< br >}}
 {{< br >}}
+{{< /left >}}
 
-<h2></h2>
 
 Please let me know if you're a blog writer! I would love to read more. Catch you later (maybe in another 6 months when I find something cool)
